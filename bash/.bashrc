@@ -32,3 +32,7 @@ alias vi="vim"
 alias ls="ls -Avp --color"
 alias 1ls="ls -1"
 alias grep="grep -n --color"
+
+### STARTUP
+
+neofetch
