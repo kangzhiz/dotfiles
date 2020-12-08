@@ -11,15 +11,15 @@ set smartindent
 set smartcase
 set noswapfile
 set incsearch
+set bg=dark
 
 call plug#begin('~/.vim/plugged')
-Plug 'sonph/onehalf', {'rtp': 'vim'}
-Plug 'sainnhe/edge'
-Plug 'sainnhe/sonokai'
+Plug 'morhetz/gruvbox'
 Plug 'sheerun/vim-polyglot'
 call plug#end()
 
-colorscheme onehalfdark 
+let g:gruvbox_italic=1
+colorscheme gruvbox
 
 let mapleader = " "
 
