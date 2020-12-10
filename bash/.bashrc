@@ -20,8 +20,7 @@ alias mints="cd ~/Documents/mints"
 alias misc="cd ~/Documents/misc"
 alias desk="cd ~/Desktop"
 alias down="cd ~/Downloads"
- 
-alias stowall="(cd .dots && stow bash && stow git && stow vim)"
+
 alias evrc="vim ~/.dots/vim/.vimrc"
 alias ebrc="vim ~/.dots/bash/.bashrc"
 alias sbrc="source ~/.bashrc"
@@ -32,7 +31,7 @@ alias sudnfc="sudo dnf clean all"
 alias g="git"
 alias vi="vim"
 
-alias ls="ls -Avp --color" 
+alias ls="ls -Avp --color"
 alias dir="dir --color"
 alias grep="grep -n --color"
 
