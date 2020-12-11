@@ -28,6 +28,7 @@ alias sudnf="sudo dnf"
 alias sudnfc="sudo dnf clean all"
 
 alias g="git"
+alias gs="git status"
 alias vi="vim"
 
 alias ls="ls -Avp --color"
