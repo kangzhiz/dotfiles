@@ -21,9 +21,8 @@ alias misc="cd ~/Documents/misc"
 alias desk="cd ~/Desktop"
 alias down="cd ~/Downloads"
 
-alias evrc="vim ~/Documents/main/dots/vim/.vimrc"
 alias ebrc="vim ~/Documents/main/dots/bash/.bashrc"
-alias sbrc="source ~/.bashrc"
+alias evrc="vim ~/Documents/main/dots/vim/.vimrc"
 
 alias sudnf="sudo dnf"
 alias sudnfc="sudo dnf clean all"
