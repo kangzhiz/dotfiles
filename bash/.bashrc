@@ -12,7 +12,7 @@ shopt -s cdspell
 ### ALIASES
 
 alias ..="cd .."
-alias dots="cd ~/.dots"
+alias dots="cd ~/Documents/main/dots"
 alias resume="cd ~/Documents/main/resume"
 alias site="cd ~/Documents/main/site"
 alias main="cd ~/Documents/main"
@@ -21,8 +21,8 @@ alias misc="cd ~/Documents/misc"
 alias desk="cd ~/Desktop"
 alias down="cd ~/Downloads"
 
-alias evrc="vim ~/.dots/vim/.vimrc"
-alias ebrc="vim ~/.dots/bash/.bashrc"
+alias evrc="vim ~/Documents/main/dots/vim/.vimrc"
+alias ebrc="vim ~/Documents/main/dots/bash/.bashrc"
 alias sbrc="source ~/.bashrc"
 
 alias sudnf="sudo dnf"
