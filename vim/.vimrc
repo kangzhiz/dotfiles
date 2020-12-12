@@ -34,6 +34,7 @@ let g:netrw_winsize = 20
 " plugins
 call plug#begin('~/.vim/plugged')
 Plug 'morhetz/gruvbox'
+Plug 'junegunn/goyo.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'tmsvg/pear-tree'
 Plug 'vim-python/python-syntax'
