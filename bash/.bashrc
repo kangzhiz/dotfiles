@@ -36,4 +36,4 @@ alias grep="grep -n --color"
 
 ### STARTUP
 
-neofetch
+neofetch --disable packages wm wm_theme icons
