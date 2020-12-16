@@ -20,12 +20,6 @@ set bg=dark
 " autocomplete
 set omnifunc=syntaxcomplete#Complete
 
-" find
-set path+=**
-set wildmenu
-set wildignore+=**/.git/**
-set wildignore+=**/node_modules/**
-
 " explorer
 let g:netrw_banner = 0
 let g:netrw_browse_split = 4
@@ -33,13 +27,12 @@ let g:netrw_winsize = 20
 
 " plugins
 call plug#begin('~/.vim/plugged')
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() }}
 Plug 'morhetz/gruvbox'
-Plug 'junegunn/goyo.vim'
-Plug 'tpope/vim-fugitive'
-Plug 'tmsvg/pear-tree'
-Plug 'vim-python/python-syntax'
-Plug 'tpope/vim-commentary'
 Plug 'justinmk/vim-sneak'
+Plug 'tmsvg/pear-tree'
+Plug 'tpope/vim-commentary'
+Plug 'vim-python/python-syntax'
 call plug#end()
 
 " theme
@@ -47,12 +40,12 @@ let g:gruvbox_italic = 1
 let g:gruvbox_contrast_dark = 'hard'
 colorscheme gruvbox
 
+" motion
+let g:sneak#label = 1
+
 " syntax
 let g:python_highlight_all = 1
 let g:python_highlight_space_errors = 0
-
-" motion
-let g:sneak#label = 1
 
 " keymappings
 let mapleader = " "
@@ -70,6 +63,7 @@ nnoremap <leader>- :resize -5<CR>
 nnoremap <leader>] :vertical resize +5<CR>
 nnoremap <leader>[ :vertical resize -5<CR>
 nnoremap <leader>w :w<CR>
+nnoremap <leader>p :FZF<CR>
 
 " commands
 command ClearBuffer execute '%bd|e#'
