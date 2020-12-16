@@ -40,8 +40,8 @@ alias sudnfc="sudo dnf clean all"
 
 alias g="git"
 alias gs="git status"
-alias ga="git add ."
-alias gg="git commit -m"
+alias ga="git add"
+alias gg="git commit"
 alias gd="git diff"
 
 alias vi="vim"
