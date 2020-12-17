@@ -22,7 +22,6 @@ export site=$HOME/Documents/main/site
 
 export main=$HOME/Documents/main
 export misc=$HOME/Documents/misc
-
 export mints=$HOME/Documents/mints
 
 export desk=$HOME/Desktop
@@ -31,12 +30,16 @@ export down=$HOME/Downloads
 ### aliases
 
 alias ..="cd .."
+alias sudnf="sudo dnf"
 
+alias ls="ls -Avp --color"
+alias dir="dir --color"
+alias grep="grep -n --color"
+
+alias vi="vim"
+alias vifzf="vim \$(fzf)"
 alias ebrc="vim ~/.dots/bash/.bashrc"
 alias evrc="vim ~/.dots/vim/.vimrc"
-
-alias sudnf="sudo dnf"
-alias sudnfc="sudo dnf clean all"
 
 alias g="git"
 alias gs="git status"
@@ -44,12 +47,8 @@ alias ga="git add"
 alias gg="git commit"
 alias gd="git diff"
 
-alias vi="vim"
-alias vifzf="vim \$(fzf)"
-
-alias ls="ls -Avp --color"
-alias dir="dir --color"
-alias grep="grep -n --color"
+alias vpn="protonvpn"
+alias svpn="sudo protonvpn"
 
 ### startup
 
