@@ -8,7 +8,7 @@
 
 ### Terminal Color Scheme
 
-* Gruvbox Dark from [Gogh](https://github.com/Mayccoll/Gogh)
+* Gruvbox Dark from [Gogh](https://github.com/Mayccoll/Gogh) altered to match the [vim color scheme](https://github.com/morhetz/gruvbox)
 
 ### Fonts
 
