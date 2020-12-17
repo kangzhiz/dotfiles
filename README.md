@@ -8,13 +8,12 @@
 
 ### Terminal Color Scheme
 
-* Gruvbox Dark from [Gogh](https://github.com/Mayccoll/Gogh) altered to match the [vim color scheme](https://github.com/morhetz/gruvbox)
+* Gruvbox Dark from [Gogh](https://github.com/Mayccoll/Gogh) altered to match morhetz's [gruvbox](https://github.com/morhetz/gruvbox)
 
 ### Fonts
 
 * [Cascadia Mono](https://github.com/microsoft/cascadia-code)
 * [Hack](https://github.com/source-foundry/Hack)
-* [Fantasque Sans Mono](https://github.com/belluzj/fantasque-sans)
 
 ### Software Packages
 
