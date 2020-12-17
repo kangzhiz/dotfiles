@@ -13,7 +13,6 @@
 ### Fonts
 
 * [Cascadia Mono](https://github.com/microsoft/cascadia-code)
-* [Hack](https://github.com/source-foundry/Hack)
 
 ### Software Packages
 
@@ -21,7 +20,4 @@
 * [neofetch](https://github.com/dylanaraps/neofetch)
 * [fzf](https://github.com/junegunn/fzf)
 * [protonvpn](https://github.com/ProtonVPN/linux-cli)
-* *and Fedora GNOME default packages*
-
-
-
+* *and [Fedora Workstation GNOME](https://getfedora.org/) default packages*
