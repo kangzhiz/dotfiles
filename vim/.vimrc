@@ -63,7 +63,7 @@ nnoremap <leader>- :resize -5<CR>
 nnoremap <leader>] :vertical resize +5<CR>
 nnoremap <leader>[ :vertical resize -5<CR>
 nnoremap <leader>w :w<CR>
-nnoremap <leader>p :FZF<CR>
+nnoremap <leader>f :FZF!<CR>
 
 " commands
 command ClearBuffer execute '%bd|e#'

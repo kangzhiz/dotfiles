@@ -13,7 +13,7 @@ shopt -s cdable_vars
 ### fzf
 
 export FZF_DEFAULT_COMMAND="find ."
-export FZF_DEFAULT_OPTS="--inline-info"
+export FZF_DEFAULT_OPTS="--inline-info --border --margin=5%"
 
 ### directories
 
