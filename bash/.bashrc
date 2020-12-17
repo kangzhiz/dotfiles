@@ -37,7 +37,7 @@ alias dir="dir --color"
 alias grep="grep -n --color"
 
 alias vi="vim"
-alias vifzf="vim \$(fzf)"
+alias vif="vim \$(fzf)"
 alias ebrc="vim ~/.dots/bash/.bashrc"
 alias evrc="vim ~/.dots/vim/.vimrc"
 
