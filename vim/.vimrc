@@ -54,14 +54,14 @@ nnoremap gp :bprev<CR>
 nnoremap gn :bnext<CR>
 nnoremap <C-j> 8j
 nnoremap <C-k> 8k
-nnoremap <leader>h :wincmd h<CR>
-nnoremap <leader>j :wincmd j<CR>
-nnoremap <leader>k :wincmd k<CR>
-nnoremap <leader>l :wincmd l<CR>
-nnoremap <leader>= :resize +5<CR>
-nnoremap <leader>- :resize -5<CR>
-nnoremap <leader>] :vertical resize +5<CR>
-nnoremap <leader>[ :vertical resize -5<CR>
+nnoremap <silent><leader>h :wincmd h<CR>
+nnoremap <silent><leader>j :wincmd j<CR>
+nnoremap <silent><leader>k :wincmd k<CR>
+nnoremap <silent><leader>l :wincmd l<CR>
+nnoremap <silent><leader>= :resize +5<CR>
+nnoremap <silent><leader>- :resize -5<CR>
+nnoremap <silent><leader>] :vertical resize +5<CR>
+nnoremap <silent><leader>[ :vertical resize -5<CR>
 nnoremap <leader>w :w<CR>
 nnoremap <leader>f :FZF!<CR>
 
