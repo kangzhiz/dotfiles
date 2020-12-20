@@ -9,6 +9,7 @@
 ### Fonts *(install to ~/.local/share/fonts)*
 
 * [Cascadia Mono](https://github.com/microsoft/cascadia-code)
+* [Jetbrains Mono NL](https://github.com/JetBrains/JetBrainsMono)
 
 ### Software Packages *(in additional to [Fedora Workstation GNOME](https://getfedora.org/) default packages)*
 
