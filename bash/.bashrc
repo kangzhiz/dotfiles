@@ -38,14 +38,19 @@ alias grep="grep -n --color"
 
 alias vi="vim"
 alias vif="vim \$(fzf)"
+
 alias ebrc="vim ~/.dots/bash/.bashrc"
 alias evrc="vim ~/.dots/vim/.vimrc"
 
 alias g="git"
+alias gp="git pull"
 alias gs="git status"
+alias gl="git log --graph"
+alias gd="git diff"
+alias gb="git branch"
+alias gc="git checkout"
 alias ga="git add"
 alias gg="git commit"
-alias gd="git diff"
 
 alias vpn="protonvpn"
 alias svpn="sudo protonvpn"
