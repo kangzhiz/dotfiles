@@ -1,19 +1,24 @@
-# Personal Linux Configuration
+# dotfiles
 
-### Creating Symlinks w/ GNU Stow
+These are just some of my personal dotfiles along with a few simple bash scripts. Feel free to take a look!
 
-1. Delete pre-existing `.bashrc`, `.gitconfig`, and `.vimrc` files.
-2. Clone repository into `~/.dots`: `git clone git@github.com:kangzhiz/dots.git .dots`.
-3. Move files into place with `stow bash git vim`.
+Everything below is mostly for my personal reference. I'm currently using [Fedora 33 Workstation w/ GNOME](https://getfedora.org/).
+
+## SETUP
+
+1. Clone repository: `git clone git@github.com:kangzhiz/dotfiles.git ~/Documents/main/dotfiles`
+2. Remove existing files: `rm -i ~/.bashrc ~/.vimrc ~/.gitconfig`
+3. Create symlinks: `(cd ~/Documents/main/dotfiles/stow && stow -t ~ bash git vim)`
 
 ### Fonts *(install to ~/.local/share/fonts)*
 
 * [Cascadia Mono](https://github.com/microsoft/cascadia-code)
-* [Jetbrains Mono NL](https://github.com/JetBrains/JetBrainsMono)
+* [Fira Code](https://github.com/tonsky/FiraCode)
 
-### Software Packages *(in additional to [Fedora Workstation GNOME](https://getfedora.org/) default packages)*
+### Packages *(in additional to default Fedora packages)*
 
 * [stow](https://github.com/aspiers/stow)
 * [neofetch](https://github.com/dylanaraps/neofetch)
 * [fzf](https://github.com/junegunn/fzf)
-* [protonvpn](https://github.com/ProtonVPN/linux-cli)
+* [protonvpn-cli](https://github.com/ProtonVPN/linux-cli)
+* [fira-code-fonts]((https://github.com/tonsky/FiraCode)
