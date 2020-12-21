@@ -17,7 +17,7 @@ export FZF_DEFAULT_OPTS="--inline-info --border --margin=5%"
 
 ### directories
 
-export dots=$HOME/.dots
+export dots=$HOME/Documents/main/dotfiles
 export site=$HOME/Documents/main/site
 
 export main=$HOME/Documents/main
@@ -39,8 +39,8 @@ alias grep="grep -n --color"
 alias vi="vim"
 alias vif="vim \$(fzf)"
 
-alias ebrc="vim ~/.dots/bash/.bashrc"
-alias evrc="vim ~/.dots/vim/.vimrc"
+alias ebrc="vim $dots/stow/bash/.bashrc"
+alias evrc="vim $dots/stow/vim/.vimrc"
 
 alias g="git"
 alias gs="git status"
