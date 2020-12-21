@@ -4,7 +4,7 @@ These are just some of my personal dotfiles along with a few simple bash scripts
 
 Everything below is mostly for my personal reference. I'm currently using [Fedora 33 Workstation w/ GNOME](https://getfedora.org/).
 
-## Setup
+### Setup
 
 1. Clone repository: `git clone git@github.com:kangzhiz/dotfiles.git ~/Documents/main/dotfiles`
 2. Remove existing files: `rm -i ~/.bashrc ~/.vimrc ~/.gitconfig`
