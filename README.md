@@ -21,4 +21,4 @@ Everything below is mostly for my personal reference. I'm currently using [Fedor
 * [neofetch](https://github.com/dylanaraps/neofetch)
 * [fzf](https://github.com/junegunn/fzf)
 * [protonvpn-cli](https://github.com/ProtonVPN/linux-cli)
-* [fira-code-fonts]((https://github.com/tonsky/FiraCode)
+* [fira-code-fonts](https://github.com/tonsky/FiraCode)
