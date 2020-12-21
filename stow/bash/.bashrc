@@ -10,6 +10,9 @@ shopt -s autocd
 shopt -s cdspell
 shopt -s cdable_vars
 
+bind "set completion-ignore-case on"
+bind "set show-all-if-ambiguous on"
+
 ### fzf
 
 export FZF_DEFAULT_COMMAND="find ."
@@ -24,6 +27,7 @@ export main=$HOME/Documents/main
 export misc=$HOME/Documents/misc
 export mints=$HOME/Documents/mints
 
+export docs=$HOME/Documents
 export desk=$HOME/Desktop
 export down=$HOME/Downloads
 
