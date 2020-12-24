@@ -17,4 +17,3 @@ Everything below is mostly for my personal reference. I'm currently using [Fedor
 * [fzf](https://github.com/junegunn/fzf)
 * [protonvpn-cli](https://github.com/ProtonVPN/linux-cli)
 * [mozilla-fira-mono-fonts](https://github.com/mozilla/fira)
-* [cascadia-mono-fonts](https://github.com/microsoft/cascadia-code)
