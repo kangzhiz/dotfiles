@@ -13,6 +13,8 @@ set smartindent
 set ignorecase
 set smartcase
 set noswapfile
+set undofile
+set undodir=~/.vim/undo
 set incsearch
 set hlsearch
 set bg=dark
