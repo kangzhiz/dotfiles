@@ -13,7 +13,6 @@ I'm currently using [Fedora 33 Workstation w/ GNOME](https://getfedora.org/).
 ### Packages
 
 * [stow](https://github.com/aspiers/stow)
-* [neofetch](https://github.com/dylanaraps/neofetch)
 * [fzf](https://github.com/junegunn/fzf)
 * [protonvpn-cli](https://github.com/ProtonVPN/linux-cli)
 * [mozilla-fira-mono-fonts](https://github.com/mozilla/fira)

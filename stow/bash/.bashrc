@@ -64,7 +64,3 @@ alias svpn="sudo protonvpn"
 ### scripts
 
 alias ftest="(cd $dots/scripts && ./ftest.sh)"
-
-### startup
-
-neofetch --disable packages wm wm_theme icons
