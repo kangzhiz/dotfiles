@@ -64,6 +64,8 @@ nnoremap <silent><leader>= :resize +5<CR>
 nnoremap <silent><leader>- :resize -5<CR>
 nnoremap <silent><leader>] :vertical resize +5<CR>
 nnoremap <silent><leader>[ :vertical resize -5<CR>
+nnoremap <silent><leader>h :noh<CR>
+nnoremap <leader>z <C-z>
 nnoremap <leader>w :w<CR>
 nnoremap <leader>f :FZF!<CR>
 
