@@ -3,6 +3,7 @@ filetype plugin indent on
 
 " general
 set noerrorbells
+set title
 set nu rnu
 set nowrap
 set tabstop=4
