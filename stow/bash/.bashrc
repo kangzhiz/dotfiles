@@ -41,6 +41,7 @@ alias dir="dir --color"
 alias grep="grep -n --color"
 
 alias vi="vim"
+alias vis="vim -S"
 alias vif="vim \$(fzf)"
 
 alias ebrc="vim $dots/stow/bash/.bashrc"
