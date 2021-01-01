@@ -65,4 +65,4 @@ alias svpn='sudo protonvpn'
 
 ### scripts
 
-alias ftest='(cd $dots/scripts && ./ftest.sh)'
+alias testfont='(cd $dots/scripts && ./testfont.sh)'
