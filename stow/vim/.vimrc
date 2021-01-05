@@ -2,31 +2,16 @@ syntax on
 filetype plugin indent on
 
 " general
-set noerrorbells
+set nocompatible noerrorbells
 set title
-set nu rnu
-set nowrap
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4
-set expandtab
-set smartindent
-set ignorecase
-set smartcase
-set noswapfile
-set undofile
-set undodir=~/.vim/undo
-set incsearch
-set hlsearch
+set number relativenumber nowrap scrolloff=3
+set ruler showcmd wildmenu
 set bg=dark
-
-" autocomplete
+set tabstop=4 softtabstop=4 shiftwidth=4 expandtab autoindent
+set incsearch hlsearch ignorecase smartcase
+set nobackup noswapfile undofile undodir=~/.vim/undo
+set backspace=indent,eol,start
 set omnifunc=syntaxcomplete#Complete
-
-" explorer
-let g:netrw_banner = 0
-let g:netrw_browse_split = 4
-let g:netrw_winsize = 20
 
 " plugins
 call plug#begin('~/.vim/plugged')
@@ -38,19 +23,18 @@ Plug 'tpope/vim-commentary'
 Plug 'vim-python/python-syntax'
 call plug#end()
 
-" theme
+" plugin configs
+let g:netrw_banner = 0
 let g:gruvbox_italic = 1
 let g:gruvbox_contrast_dark = 'hard'
-colorscheme gruvbox
-
-" motion
 let g:sneak#label = 1
-
-" syntax
 let g:python_highlight_all = 1
 let g:python_highlight_space_errors = 0
 
-" keymappings
+" colorscheme
+colorscheme gruvbox
+
+" custom keymappings
 let mapleader = " "
 nnoremap gb :ls<CR>:buffer<Space>
 nnoremap gp :bprev<CR>
@@ -70,8 +54,5 @@ nnoremap <leader>z <C-z>
 nnoremap <leader>w :w<CR>
 nnoremap <leader>f :FZF!<CR>
 
-" commands
-command ClearBuffer execute '%bd|e#'
-
-" trailing whitespace
+" delete trailing whitespace on save
 autocmd BufWritePre * :%s/\s\+$//e
