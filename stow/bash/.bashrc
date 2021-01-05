@@ -34,12 +34,12 @@ export down=$HOME/Downloads
 
 ### aliases
 
-alias ..='cd ..'
-alias sudnf='sudo dnf'
-
+alias cd='cd $1 >/dev/null'
 alias ls='ls -Avp --color'
 alias lsl='ls -oh'
 alias grep='grep -n --color'
+
+alias sudnf='sudo dnf'
 
 alias vi='vim'
 alias vis='vi -S'
