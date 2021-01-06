@@ -1,14 +1,14 @@
 # dotfiles
 
-These are just some of my personal dotfiles and bash scripts.
+Just some of my dotfiles.
 
-I'm currently using [Fedora 33 Workstation w/ GNOME](https://getfedora.org/).
+I am currently using [Fedora 33 Workstation w/ GNOME](https://getfedora.org/).
 
 ### Setup
 
 1. Clone repository: `git clone git@github.com:kangzhiz/dotfiles.git ~/Documents/main/dotfiles`
 2. Remove existing files: `rm -i ~/.bashrc ~/.vimrc ~/.gitconfig`
-3. Create symlinks: `(cd ~/Documents/main/dotfiles/stow && stow -t ~ bash git vim)`
+3. Create symlinks: `(cd ~/Documents/main/dotfiles && stow -t ~ stow)`
 
 ### Packages
 

@@ -9,7 +9,7 @@ set ruler showcmd wildmenu
 set bg=dark
 set tabstop=4 softtabstop=4 shiftwidth=4 expandtab autoindent
 set incsearch hlsearch ignorecase smartcase
-set nobackup noswapfile undofile undodir=~/.vim/undo
+set nobackup noswapfile undofile undodir=~/.vim/undo viminfo=""
 set backspace=indent,eol,start
 set omnifunc=syntaxcomplete#Complete
 
