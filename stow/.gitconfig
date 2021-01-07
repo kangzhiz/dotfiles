@@ -1,5 +1,36 @@
 [user]
-    name = kangzhiz
+    name = John Zhao
     email = kangzhiz@pm.me
-[pull]
-    rebase = false
+
+[alias]
+    a = add
+    aa = add --all
+    ac = !git add --all && git commit --message
+    bl = blame
+    blr = blame -L
+    br = branch
+    bra = branch --all
+    brd = branch --delete
+    cm = commit --message
+    cma = commit --amend --no-edit
+    cmam = commit --amend --message
+    co = checkout
+    cob = checkout -b
+    d = diff
+    dc = diff --cached
+    do = diff ...origin
+    f = fetch
+    fa = fetch --all --prune
+    g = push
+    l = log --oneline --graph
+    ll = log --stat --graph
+    lll = log --patch-with-stat --graph
+    m = merge
+    rest = restore
+    restt = restore --staged
+    s = status --short --branch
+    sd = !git diff --stat && git diff --stat --cached
+    st = stash list
+    std = stash drop
+    sto = stash pop --quiet
+    stu = stash push --message
