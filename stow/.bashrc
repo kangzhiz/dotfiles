@@ -34,7 +34,6 @@ alias _mint='cd ~/Documents/mints'
 alias _site='cd ~/Documents/main/kangzhiz.github.io'
 alias _dots='cd ~/Documents/main/dotfiles'
 
-alias cls='clear'
 alias ls='ls -Avp --color'
 alias lsl='ls -oh'
 alias grep='grep -n --color'
