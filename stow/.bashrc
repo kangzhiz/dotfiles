@@ -25,7 +25,7 @@ FZF_IGNORE='! -path "*/.git/*" ! -path "*/node_modules/*"'
 export FZF_DEFAULT_COMMAND="find . -type f ${FZF_IGNORE}"
 export FZF_ALT_C_COMMAND="find . -type d ${FZF_IGNORE}"
 export FZF_CTRL_T_COMMAND=${FZF_DEFAULT_COMMAND}
-export FZF_DEFAULT_OPTS='--inline-info --reverse --height=11 --margin=0,0,0,3'
+export FZF_DEFAULT_OPTS='--inline-info --reverse --height=13 --margin=0,0,0,3'
 
 ### aliases
 
