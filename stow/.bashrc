@@ -3,8 +3,8 @@
 B="\[\033[1;34m\]"
 Y="\[\033[1;33m\]"
 P="\[\033[1;35m\]"
-PS1="${B}( ${Y}\W${P}\$(__git_ps1 ' %s') ${B}) ${P}> \[\e[m\]"
-
+R="\[\033[1;31m\]"
+PS1="${B}( ${Y}\W${R}\$(__git_ps1 ' %s') ${B}) ${P}> \[\e[m\]"
 PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME}: ${PWD}\007"'
 
 ### general settings
@@ -40,7 +40,7 @@ alias grep='grep -n --color'
 alias sudnf='sudo dnf'
 
 alias vi='vim'
-alias vis='vi -S'
+alias vii='vim .'
 alias ebrc='vi ~/Documents/main/dotfiles/stow/.bashrc'
 alias evrc='vi ~/Documents/main/dotfiles/stow/.vimrc'
 alias egcf='vi ~/Documents/main/dotfiles/stow/.gitconfig'

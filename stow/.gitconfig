@@ -2,6 +2,9 @@
     name = John Zhao
     email = kangzhiz@pm.me
 
+[core]
+	excludesfile = /home/k/Documents/main/dotfiles/resources/.global_gitignore
+
 [alias]
     a = add
     aa = add --all
