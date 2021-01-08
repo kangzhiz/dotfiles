@@ -15,8 +15,8 @@ set omnifunc=syntaxcomplete#Complete
 
 " plugins
 call plug#begin('~/.vim/plugged')
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() }}
 Plug 'morhetz/gruvbox'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() }}
 Plug 'justinmk/vim-sneak'
 Plug 'tmsvg/pear-tree'
 Plug 'tpope/vim-commentary'
@@ -27,6 +27,7 @@ call plug#end()
 let g:netrw_banner = 0
 let g:gruvbox_italic = 1
 let g:gruvbox_contrast_dark = 'hard'
+let g:fzf_layout = { 'window': { 'width': 0.9, 'height': 0.7 } }
 let g:sneak#label = 1
 let g:python_highlight_all = 1
 let g:python_highlight_space_errors = 0
@@ -52,7 +53,7 @@ nnoremap <silent><leader>[ :vertical resize -5<CR>
 nnoremap <silent><leader>h :noh<CR>
 nnoremap <leader>z <C-z>
 nnoremap <leader>w :w<CR>
-nnoremap <leader>f :FZF!<CR>
+nnoremap <leader>f :FZF<CR>
 
 " delete trailing whitespace on save
 autocmd BufWritePre * :%s/\s\+$//e
