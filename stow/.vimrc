@@ -7,10 +7,10 @@ set nocompatible noerrorbells
 set title
 set number relativenumber nowrap scrolloff=3
 set ruler showcmd wildmenu
-set bg=dark
+set incsearch hlsearch
 set tabstop=4 softtabstop=4 shiftwidth=4 expandtab autoindent
-set incsearch hlsearch ignorecase smartcase
 set nobackup noswapfile undofile undodir=~/.vim/undo viminfo=""
+set bg=dark
 set backspace=indent,eol,start
 set omnifunc=syntaxcomplete#Complete
 
@@ -47,6 +47,8 @@ nnoremap <C-b> :ls<CR>:buffer<Space>
 nnoremap <C-n> :bnext<CR>
 nnoremap <C-p> :bprev<CR>
 nnoremap <C-t> :FZF<CR>
+nnoremap <C-h> :%s/
+nnoremap <leader><leader> :noh<CR>
 nnoremap <leader>h :wincmd h<CR>
 nnoremap <leader>j :wincmd j<CR>
 nnoremap <leader>k :wincmd k<CR>
@@ -55,7 +57,6 @@ nnoremap <leader>= :res +
 nnoremap <leader>- :res -
 nnoremap <leader>] :vert res +
 nnoremap <leader>[ :vert res -
-nnoremap <leader><leader> :noh<CR>
 nnoremap <leader>w :w<CR>
 
 vnoremap <C-j> 8j
