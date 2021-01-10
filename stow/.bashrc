@@ -25,7 +25,7 @@ FZF_IGNORE='! -path "*/.git/*" ! -path "*/node_modules/*"'
 export FZF_DEFAULT_COMMAND="find . -type f ${FZF_IGNORE}"
 export FZF_ALT_C_COMMAND="find . -type d ${FZF_IGNORE}"
 export FZF_CTRL_T_COMMAND=${FZF_DEFAULT_COMMAND}
-export FZF_DEFAULT_OPTS='--inline-info --reverse --height=13 --margin=0,0,0,3'
+export FZF_DEFAULT_OPTS='--inline-info --reverse --height=21 --margin=0,0,0,3'
 
 ### aliases
 
@@ -43,6 +43,8 @@ alias _mint='cd ~/Documents/mints'
 alias _site='cd ~/Documents/main/kangzhiz.github.io'
 alias _dots='cd ~/Documents/main/dotfiles'
 
+alias naut='nautilus'
+
 alias vi='vim'
 alias ebrc='vi ~/Documents/main/dotfiles/stow/.bashrc'
 alias evrc='vi ~/Documents/main/dotfiles/stow/.vimrc'
@@ -52,7 +54,7 @@ alias g='git'
 alias gs='g s'
 alias gg='g g'
 
-alias ls='ls -Avp --color'
+alias ls='ls -AFv --color'
 alias lsl='ls -oh'
 alias tree='tree -CIa ".git|node_modules"'
 alias grep='grep -Rn --color --exclude-dir={.git,node_modules}'
