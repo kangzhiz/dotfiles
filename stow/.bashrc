@@ -1,4 +1,4 @@
-### prompt
+# prompt
 
 B='\[\033[1;34m\]'
 Y='\[\033[1;33m\]'
@@ -7,7 +7,8 @@ R='\[\033[1;31m\]'
 PS1="${B}( ${Y}\W${R}\$(__git_ps1 ' %s') ${B}) ${P}> \[\e[m\]"
 PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME}: ${PWD}\007"'
 
-### general
+
+# general settings
 
 shopt -s autocd
 shopt -s cdspell
@@ -27,7 +28,8 @@ export FZF_ALT_C_COMMAND="find . -type d ${FZF_IGNORE}"
 export FZF_CTRL_T_COMMAND=${FZF_DEFAULT_COMMAND}
 export FZF_DEFAULT_OPTS='--inline-info --reverse --height=21 --margin=0,0,0,3'
 
-### aliases
+
+# custom aliases
 
 alias sudnf='sudo dnf'
 alias dnfhist='dnf history --reverse'
