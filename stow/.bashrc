@@ -43,8 +43,6 @@ alias _mint='cd ~/Documents/mints'
 alias _site='cd ~/Documents/main/kangzhiz.github.io'
 alias _dots='cd ~/Documents/main/dotfiles'
 
-alias naut='nautilus'
-
 alias vi='vim'
 alias ebrc='vi ~/Documents/main/dotfiles/stow/.bashrc'
 alias evrc='vi ~/Documents/main/dotfiles/stow/.vimrc'
@@ -53,6 +51,12 @@ alias egcf='vi ~/Documents/main/dotfiles/stow/.gitconfig'
 alias g='git'
 alias gs='g s'
 alias gg='g g'
+
+alias ff='firefox'
+alias chrome='google-chrome'
+alias naut='nautilus'
+alias open='gio open'
+alias term='gnome-terminal'
 
 alias ls='ls -AFv --color'
 alias lsl='ls -oh'
