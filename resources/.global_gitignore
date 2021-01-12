@@ -1,0 +1,5 @@
+# vim session files
+*.vim
+
+# python virtual environments
+.venv/

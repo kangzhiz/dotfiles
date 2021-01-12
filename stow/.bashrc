@@ -34,15 +34,10 @@ export FZF_DEFAULT_OPTS='--inline-info --reverse --height=21 --margin=0,0,0,3'
 alias sudnf='sudo dnf'
 alias dnfhist='dnf history --reverse'
 
-alias vpn='protonvpn'
-alias svpn='sudo protonvpn'
-
 alias ..='cd ..'
 alias _desk='cd ~/Desktop'
-alias _main='cd ~/Documents/main'
-alias _misc='cd ~/Documents/misc'
-alias _mint='cd ~/Documents/mints'
-alias _site='cd ~/Documents/main/kangzhiz.github.io'
+alias _down='cd ~/Downloads'
+alias _docs='cd ~/Documents'
 alias _dots='cd ~/Documents/main/dotfiles'
 
 alias vi='vim'
@@ -53,6 +48,14 @@ alias egcf='vi ~/Documents/main/dotfiles/stow/.gitconfig'
 alias g='git'
 alias gs='g s'
 alias gg='g g'
+
+alias py='python'
+alias pymvenv='py -m venv .venv'
+alias pyva='source .venv/bin/activate'
+alias pyvd='deactivate'
+
+alias vpn='protonvpn'
+alias svpn='sudo protonvpn'
 
 alias ff='firefox'
 alias chrome='google-chrome'
