@@ -1,10 +1,8 @@
 # prompt
 
-B='\[\033[1;34m\]'
-Y='\[\033[1;33m\]'
-P='\[\033[1;35m\]'
-R='\[\033[1;31m\]'
-PS1="${B}( ${Y}\W${R}\$(__git_ps1 ' %s') ${B}) ${P}> \[\e[m\]"
+MAIN='\[\033[1;36m\]'
+GIT='\[\033[1;32m\]'
+PS1="${MAIN}\W ${GIT}\$(__git_ps1 '%s ')${MAIN}\$  \[\e[m\]"
 PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME}: ${PWD}\007"'
 
 
@@ -23,8 +21,8 @@ source /usr/share/fzf/shell/key-bindings.bash
 __git_complete g _git
 
 FZF_IGNORE='! -path "*/.git/*" ! -path "*/node_modules/*"'
-export FZF_DEFAULT_COMMAND="find . -type f ${FZF_IGNORE}"
-export FZF_ALT_C_COMMAND="find . -type d ${FZF_IGNORE}"
+export FZF_DEFAULT_COMMAND="find . -type f ${FZF_IGNORE} | cut -sd / -f 2-"
+export FZF_ALT_C_COMMAND="find . -type d ${FZF_IGNORE} | cut -sd / -f 2-"
 export FZF_CTRL_T_COMMAND=${FZF_DEFAULT_COMMAND}
 export FZF_DEFAULT_OPTS='--inline-info --reverse --height=21 --margin=0,0,0,3'
 
@@ -39,6 +37,7 @@ alias _desk='cd ~/Desktop'
 alias _down='cd ~/Downloads'
 alias _docs='cd ~/Documents'
 alias _dots='cd ~/Documents/main/dotfiles'
+alias _site='cd ~/Documents/main/kangzhiz.github.io'
 
 alias vi='vim'
 alias ebrc='vim ~/Documents/main/dotfiles/stow/.bashrc'

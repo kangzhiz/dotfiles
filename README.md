@@ -2,7 +2,9 @@
 
 Just some of my dotfiles.
 
-I am currently using [Fedora 33 Workstation w/ GNOME](https://getfedora.org/).
+Currently using [Fedora 33 Workstation w/ GNOME](https://getfedora.org/).
+
+*[Nord](https://github.com/arcticicestudio/nord) everything.*
 
 ### Setup
 

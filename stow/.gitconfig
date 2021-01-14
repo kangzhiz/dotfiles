@@ -5,6 +5,9 @@
 [core]
 	excludesfile = /home/k/Documents/main/dotfiles/resources/.global_gitignore
 
+[diff]
+    tool = vimdiff
+
 [alias]
     a = add
     aa = add -A
@@ -23,6 +26,8 @@
     d = diff
     dc = diff --cached
     do = diff ...origin
+    dt = difftool
+    dtc = difftool --cached
     f = fetch -vp
     fa = fetch -vp --all
     g = push
