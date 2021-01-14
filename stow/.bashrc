@@ -2,7 +2,7 @@
 
 MAIN='\[\033[1;36m\]'
 GIT='\[\033[1;32m\]'
-PS1="${MAIN}\W ${GIT}\$(__git_ps1 '%s ')${MAIN}\$  \[\e[m\]"
+PS1="${MAIN}\W ${GIT}\$(__git_ps1 '%s ')${MAIN}\$ \[\e[m\]"
 PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME}: ${PWD}\007"'
 
 
