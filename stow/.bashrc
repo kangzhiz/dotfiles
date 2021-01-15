@@ -37,7 +37,6 @@ alias _desk='cd ~/Desktop'
 alias _down='cd ~/Downloads'
 alias _docs='cd ~/Documents'
 alias _dots='cd ~/Documents/main/dotfiles'
-alias _site='cd ~/Documents/main/kangzhiz.github.io'
 
 alias vi='vim'
 alias ebrc='vim ~/Documents/main/dotfiles/stow/.bashrc'
@@ -46,7 +45,6 @@ alias egcf='vim ~/Documents/main/dotfiles/stow/.gitconfig'
 
 alias g='git'
 alias gs='git s'
-alias gg='git g'
 
 alias py='python'
 alias pymvenv='python -m venv .venv'
@@ -59,13 +57,14 @@ alias vpn='protonvpn'
 alias svpn='sudo protonvpn'
 
 alias ff='firefox'
-alias chrome='google-chrome'
+alias term='gnome-terminal'
 alias naut='nautilus'
 alias open='gio open'
-alias term='gnome-terminal'
 
 alias ls='ls -AFv --color'
 alias lsl='ls -AFvoh --color'
 alias tree='tree -CIa ".git|node_modules"'
 alias grep='grep -Rn --color --exclude-dir={.git,node_modules}'
 alias rm='rm -i'
+
+alias gg='exit'
