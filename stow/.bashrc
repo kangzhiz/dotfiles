@@ -1,12 +1,8 @@
-# prompt
-
-COLOR1='\[\033[1;36m\]'
-COLOR2='\[\033[1;32m\]'
-PS1="${COLOR1}\W ${COLOR2}\$(__git_ps1 '%s ')${COLOR1}\$ \[\e[m\]"
-PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME}: ${PWD}\007"'
+# .bashrc
+# John Zhao (https://www.kangzhiz.com)
 
 
-# general settings
+### general settings
 
 shopt -s autocd
 shopt -s cdspell
@@ -21,6 +17,17 @@ source /usr/share/fzf/shell/key-bindings.bash
 
 __git_complete g _git
 
+
+### prompt and terminal title
+
+COLOR1='\[\033[1;36m\]'
+COLOR2='\[\033[1;32m\]'
+PS1="${COLOR1}\W ${COLOR2}\$(__git_ps1 '%s ')${COLOR1}\$ \[\e[m\]"
+PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME}: ${PWD}\007"'
+
+
+### fzf settings
+
 FZF_IGNORE='! -path "*/.git/*" ! -path "*/node_modules/*"'
 export FZF_DEFAULT_COMMAND="find . -type f ${FZF_IGNORE} | cut -sd / -f 2-"
 export FZF_ALT_C_COMMAND="find . -type d ${FZF_IGNORE} | cut -sd / -f 2-"
@@ -28,19 +35,19 @@ export FZF_CTRL_T_COMMAND=${FZF_DEFAULT_COMMAND}
 export FZF_DEFAULT_OPTS='--inline-info --reverse --height=21 --margin=0,0,0,3'
 
 
-# custom paths
+### custom paths
 
 _desk=~/Desktop
 _docs=~/Documents
 _down=~/Downloads
 
 _dots=$_docs/dotfiles
+_fork=$_docs/forks
 _site=$_docs/kangzhiz.github.io
 _pysc=$_docs/pyscripts
-_fork=$_docs/forks
 
 
-# custom aliases
+### custom aliases
 
 alias sudnf='sudo dnf'
 alias dnfhist='dnf history --reverse'
@@ -52,6 +59,11 @@ alias lsl='ls -AFvoh --color'
 alias tree='tree -CIa ".git|node_modules"'
 alias grep='grep -Rn --color --exclude-dir={.git,node_modules}'
 alias rm='rm -i'
+
+alias ff='firefox'
+alias term='gnome-terminal'
+alias naut='nautilus'
+alias open='gio open'
 
 alias vi='vim'
 alias ebrc='vim $_dots/stow/.bashrc'
@@ -70,10 +82,5 @@ alias pipup='python -m pip install --upgrade pip'
 
 alias vpn='protonvpn'
 alias svpn='sudo protonvpn'
-
-alias ff='firefox'
-alias term='gnome-terminal'
-alias naut='nautilus'
-alias open='gio open'
 
 alias gg='exit'

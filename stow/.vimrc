@@ -1,4 +1,8 @@
-" general settings
+" .vimrc
+" John Zhao (https://www.kangzhiz.com)
+
+
+""" general settings
 
 syntax on
 filetype plugin indent on
@@ -15,7 +19,7 @@ set backspace=indent,eol,start
 set omnifunc=syntaxcomplete#Complete
 
 
-" plugins
+""" plugins and plugin settings
 
 call plug#begin('~/.vim/plugged')
 Plug 'arcticicestudio/nord-vim'
@@ -41,7 +45,8 @@ colorscheme nord
 highlight Normal guibg=#1e1e1e guifg=#d8dee9
 highlight CursorLine guibg=#2e3440
 
-" custom keymappings
+
+""" custom keymappings
 
 let mapleader = " "
 
@@ -58,6 +63,7 @@ nnoremap <C-right> :vert res +1<CR>
 nnoremap <leader><leader> :noh<CR>
 nnoremap <leader>w :w<CR>
 nnoremap <leader>; q:i
+nnoremap <leader>zz oJohn Zhao (https://www.kangzhiz.com)<Esc>
 nnoremap <leader>h :wincmd h<CR>
 nnoremap <leader>j :wincmd j<CR>
 nnoremap <leader>k :wincmd k<CR>
