@@ -1,8 +1,8 @@
 # prompt
 
-MAIN='\[\033[1;36m\]'
-GIT='\[\033[1;32m\]'
-PS1="${MAIN}\W ${GIT}\$(__git_ps1 '%s ')${MAIN}\$ \[\e[m\]"
+COLOR1='\[\033[1;36m\]'
+COLOR2='\[\033[1;32m\]'
+PS1="${COLOR1}\W ${COLOR2}\$(__git_ps1 '%s ')${COLOR1}\$ \[\e[m\]"
 PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME}: ${PWD}\007"'
 
 
@@ -36,12 +36,13 @@ alias ..='cd ..'
 alias _desk='cd ~/Desktop'
 alias _down='cd ~/Downloads'
 alias _docs='cd ~/Documents'
-alias _dots='cd ~/Documents/main/dotfiles'
+alias _dots='cd ~/Documents/dotfiles'
+alias _site='cd ~/Documents/kangzhiz.github.io'
 
 alias vi='vim'
-alias ebrc='vim ~/Documents/main/dotfiles/stow/.bashrc'
-alias evrc='vim ~/Documents/main/dotfiles/stow/.vimrc'
-alias egcf='vim ~/Documents/main/dotfiles/stow/.gitconfig'
+alias ebrc='vim ~/Documents/dotfiles/bash/.bashrc'
+alias evrc='vim ~/Documents/dotfiles/vim/.vimrc'
+alias egcf='vim ~/Documents/dotfiles/git/.gitconfig'
 
 alias g='git'
 alias gs='git s'

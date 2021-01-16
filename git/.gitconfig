@@ -3,7 +3,7 @@
     email = kangzhiz@pm.me
 
 [core]
-	excludesfile = /home/k/Documents/main/dotfiles/resources/.global_gitignore
+	excludesfile = ~/.gitignore
 
 [diff]
     tool = vimdiff
