@@ -8,9 +8,10 @@ Currently using [Fedora 33 Workstation w/ GNOME](https://getfedora.org/).
 
 ### Setup
 
-1. Clone repository: `git clone git@github.com:kangzhiz/dotfiles.git ~/Documents/main/dotfiles`
-2. Remove existing files: `rm -i ~/.bashrc ~/.vimrc ~/.gitconfig`
-3. Create symlinks: `(cd ~/Documents/main/dotfiles && stow -t ~ stow)`
+1. Install `stow`.
+2. Clone repository into `~/Documents/dotfiles`.
+3. Navigate to directory.
+4. Run `install.sh`.
 
 ### Packages
 

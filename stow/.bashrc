@@ -10,6 +10,7 @@ PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME}: ${PWD}\007"'
 
 shopt -s autocd
 shopt -s cdspell
+shopt -s cdable_vars
 
 bind 'set completion-ignore-case on'
 bind 'set show-all-if-ambiguous on'
@@ -27,22 +28,35 @@ export FZF_CTRL_T_COMMAND=${FZF_DEFAULT_COMMAND}
 export FZF_DEFAULT_OPTS='--inline-info --reverse --height=21 --margin=0,0,0,3'
 
 
+# custom paths
+
+_desk=~/Desktop
+_docs=~/Documents
+_down=~/Downloads
+
+_dots=$_docs/dotfiles
+_site=$_docs/kangzhiz.github.io
+_pysc=$_docs/pyscripts
+_fork=$_docs/forks
+
+
 # custom aliases
 
 alias sudnf='sudo dnf'
 alias dnfhist='dnf history --reverse'
 
 alias ..='cd ..'
-alias _desk='cd ~/Desktop'
-alias _down='cd ~/Downloads'
-alias _docs='cd ~/Documents'
-alias _dots='cd ~/Documents/dotfiles'
-alias _site='cd ~/Documents/kangzhiz.github.io'
+alias cd='cd >/dev/null'
+alias ls='ls -AFv --color'
+alias lsl='ls -AFvoh --color'
+alias tree='tree -CIa ".git|node_modules"'
+alias grep='grep -Rn --color --exclude-dir={.git,node_modules}'
+alias rm='rm -i'
 
 alias vi='vim'
-alias ebrc='vim ~/Documents/dotfiles/bash/.bashrc'
-alias evrc='vim ~/Documents/dotfiles/vim/.vimrc'
-alias egcf='vim ~/Documents/dotfiles/git/.gitconfig'
+alias ebrc='vim $_dots/stow/.bashrc'
+alias evrc='vim $_dots/stow/.vimrc'
+alias egcf='vim $_dots/stow/.gitconfig'
 
 alias g='git'
 alias gs='git s'
@@ -61,11 +75,5 @@ alias ff='firefox'
 alias term='gnome-terminal'
 alias naut='nautilus'
 alias open='gio open'
-
-alias ls='ls -AFv --color'
-alias lsl='ls -AFvoh --color'
-alias tree='tree -CIa ".git|node_modules"'
-alias grep='grep -Rn --color --exclude-dir={.git,node_modules}'
-alias rm='rm -i'
 
 alias gg='exit'
