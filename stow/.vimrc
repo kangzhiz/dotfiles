@@ -1,7 +1,3 @@
-" .vimrc
-" John Zhao (https://www.kangzhiz.com)
-
-
 """ general settings
 
 syntax on
@@ -9,11 +5,11 @@ filetype plugin indent on
 
 set nocompatible noerrorbells termguicolors
 set title
-set number relativenumber nowrap scrolloff=3
+set number relativenumber nowrap scrolloff=5
 set cursorline ruler showcmd wildmenu
 set incsearch hlsearch
 set tabstop=4 softtabstop=4 shiftwidth=4 expandtab autoindent
-set nobackup noswapfile undofile undodir=~/.vim/undo viminfo=""
+set hidden nobackup noswapfile undofile undodir=~/.vim/undo viminfo=""
 set bg=dark
 set backspace=indent,eol,start
 set omnifunc=syntaxcomplete#Complete

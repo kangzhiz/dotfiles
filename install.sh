@@ -1,31 +1,28 @@
 #!/usr/bin/env bash
-
-# install.sh [dotfiles]
-# John Zhao (https://www.kangzhiz.com)
-#
-# This script is used to set up my dotfiles.
+# ---
+# This script is used to set up dotfiles.
 # It uses GNU stow to create symlinks for each file in the 'stow' directory.
-# It also sets up some other things related to my configurations.
+# It also sets up some other things related to the configs.
+# ---
 
 
-# Check if repo was cloned into correct directory.
-# Some bash variables/aliases will be broken if dotfiles is in the wrong place.
+# check if repo was cloned into correct directory
+# some bash variables/aliases will be broken if dotfiles is in the wrong place
 if [ $PWD != "$HOME/Documents/dotfiles" ]; then
     echo 'Oops, wrong directory! Try cloning into ~/Documents/dotfiles.'
     exit
 fi
 
-# Move existing files into backup directory.
+# move existing files into backup directory
+if [ ! -d 'stash' ]; then
+    mkdir stash
+fi
+
 files_to_move=(
     "$HOME/.bashrc"
     "$HOME/.vimrc"
     "$HOME/.gitconfig"
 )
-
-if [ ! -d 'stash' ]; then
-    mkdir stash
-fi
-
 for file in ${files_to_move[@]}
 do
     if [ -f $file ]; then
@@ -33,18 +30,18 @@ do
     fi
 done
 
-# Run stow to make symlinks in home directory.
+# run stow to make symlinks in home directory
 stow -t $HOME stow
 
-# Create vim undo directory.
+# create vim undo directory
 if [ ! -d $HOME/.vim/undo ]; then
     mkdir $HOME/.vim/undo
 fi
 
-# Remove viminfo if it exists.
+# remove viminfo if it exists
 if [ -f $HOME/.viminfo ]; then
     rm $HOME/.viminfo
 fi
 
-# Finished.
+# finished
 echo "Done."

@@ -1,7 +1,3 @@
-# .bashrc
-# John Zhao (https://www.kangzhiz.com)
-
-
 ### general settings
 
 shopt -s autocd
