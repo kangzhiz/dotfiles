@@ -37,6 +37,7 @@ _desk=~/Desktop
 _docs=~/Documents
 _down=~/Downloads
 
+_arch=$_docs/archive
 _dots=$_docs/dotfiles
 _fork=$_docs/forks
 _site=$_docs/kangzhiz.github.io

@@ -19,6 +19,7 @@
     c = commit -m
     ca = commit --amend -m
     can = commit --amend --no-edit
+    cl = clone
     d = diff
     dc = diff --cached
     do = diff ...origin
