@@ -4,7 +4,7 @@ Just some of my dotfiles.
 
 Currently using [Fedora 33 Workstation w/ GNOME](https://getfedora.org/).
 
-*For python scripts, visit [here](https://github.com/kangzhiz/pyscripts)*
+*For python scripts, visit [here](https://github.com/kangzhiz/pyscripts).*
 
 ### Setup
 
