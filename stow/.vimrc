@@ -39,7 +39,7 @@ let g:python_highlight_space_errors = 0
 
 colorscheme nord
 highlight Normal guibg=#1e1e1e guifg=#d8dee9
-highlight CursorLine guibg=#2e3440
+highlight CursorLine guibg=#1e1e1e
 
 
 """ custom keymappings
