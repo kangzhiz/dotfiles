@@ -59,7 +59,6 @@ nnoremap <C-right> :vert res +1<CR>
 nnoremap <leader><leader> :noh<CR>
 nnoremap <leader>w :w<CR>
 nnoremap <leader>; q:i
-nnoremap <leader>zz oJohn Zhao (https://www.kangzhiz.com)<Esc>
 nnoremap <leader>h :wincmd h<CR>
 nnoremap <leader>j :wincmd j<CR>
 nnoremap <leader>k :wincmd k<CR>

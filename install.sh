@@ -1,10 +1,4 @@
 #!/usr/bin/env bash
-# ---
-# This script is used to set up dotfiles.
-# It uses GNU stow to create symlinks for each file in the 'stow' directory.
-# It also sets up some other things related to the configs.
-# ---
-
 
 # check if repo was cloned into correct directory
 # some bash variables/aliases will be broken if dotfiles is in the wrong place
