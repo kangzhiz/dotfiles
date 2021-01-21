@@ -35,8 +35,6 @@ export FZF_DEFAULT_OPTS='--inline-info --reverse --height=21 --margin=0,0,0,3'
 
 _desk=~/Desktop
 _docs=~/Documents
-_down=~/Downloads
-
 _dots=$_docs/dotfiles
 
 ### custom aliases
