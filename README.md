@@ -4,8 +4,6 @@ Just some of my dotfiles.
 
 Currently using [Fedora 33 Workstation w/ GNOME](https://getfedora.org/).
 
-*For python scripts, visit [here](https://github.com/kangzhiz/pyscripts).*
-
 ### Setup
 
 1. Install `stow`.
@@ -15,7 +13,6 @@ Currently using [Fedora 33 Workstation w/ GNOME](https://getfedora.org/).
 
 ### Packages
 
-* [stow](https://github.com/aspiers/stow)
-* [fzf](https://github.com/junegunn/fzf)
-* [protonvpn-cli](https://github.com/ProtonVPN/linux-cli)
-* [mozilla-fira-mono-fonts](https://github.com/mozilla/fira)
+* stow
+* fzf
+* protonvpn-cli
