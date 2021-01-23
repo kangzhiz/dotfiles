@@ -1,8 +1,6 @@
 ### general settings
 
-shopt -s autocd
 shopt -s cdspell
-shopt -s cdable_vars
 
 bind 'set completion-ignore-case on'
 bind 'set show-all-if-ambiguous on'
@@ -31,34 +29,33 @@ export FZF_CTRL_T_COMMAND=${FZF_DEFAULT_COMMAND}
 export FZF_DEFAULT_OPTS='--inline-info --reverse --height=21 --margin=0,0,0,3'
 
 
-### custom paths
-
-_desk=~/Desktop
-_docs=~/Documents
-_dots=$_docs/dotfiles
-
 ### custom aliases
 
 alias sudnf='sudo dnf'
 alias dnfhist='dnf history --reverse'
 
 alias ..='cd ..'
-alias cd='cd >/dev/null'
+alias _desk='cd ~/Desktop'
+alias _docs='cd ~/Documents'
+alias _down='cd ~/Downloads'
+
 alias ls='ls -AFv --color'
-alias lsl='ls -oh'
+alias ll='ls -oh'
 alias tree='tree -CIa ".git|node_modules"'
 alias grep='grep -Rn --color --exclude-dir={.git,node_modules}'
 alias rm='rm -i'
+alias gg='exit'
 
 alias ff='firefox'
 alias term='gnome-terminal'
 alias naut='nautilus'
 alias open='gio open'
 
-alias vi='vim'
-alias ebrc='vi $_dots/stow/.bashrc'
-alias evrc='vi $_dots/stow/.vimrc'
-alias egcf='vi $_dots/stow/.gitconfig'
+alias v='vim'
+alias vpu='rm -f ~/.vim/undo/* && tree ~/.vim/undo'
+alias ebrc='v ~/Documents/dotfiles/stow/.bashrc'
+alias evrc='v ~/Documents/dotfiles/stow/.vimrc'
+alias egcf='v ~/Documents/dotfiles/stow/.gitconfig'
 
 alias g='git'
 alias gs='g s'
@@ -71,5 +68,3 @@ alias pyvd='deactivate'
 
 alias vpn='protonvpn'
 alias svpn='sudo protonvpn'
-
-alias gg='exit'
