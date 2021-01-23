@@ -3,12 +3,12 @@
 syntax on
 filetype plugin indent on
 
-set nocompatible noerrorbells termguicolors
-set title
+set nocompatible noerrorbells termguicolors shellcmdflag=-ic
 set number relativenumber nowrap scrolloff=5
-set cursorline ruler showcmd wildmenu
-set incsearch hlsearch
+set title cursorline ruler showcmd wildmenu
 set tabstop=4 softtabstop=4 shiftwidth=4 expandtab autoindent
+set incsearch hlsearch
+set splitbelow
 set hidden nobackup noswapfile undofile undodir=~/.vim/undo viminfo=""
 set bg=dark
 set backspace=indent,eol,start
@@ -39,7 +39,7 @@ let g:python_highlight_space_errors = 0
 
 colorscheme nord
 highlight Normal guibg=#1e1e1e guifg=#d8dee9
-highlight CursorLine guibg=#1e1e1e
+highlight CursorLine guibg=#2e3440
 
 
 """ custom keymappings
@@ -58,7 +58,10 @@ nnoremap <C-left> :vert res -1<CR>
 nnoremap <C-right> :vert res +1<CR>
 nnoremap <leader><leader> :noh<CR>
 nnoremap <leader>w :w<CR>
-nnoremap <leader>; q:i
+nnoremap <leader>zz :term<CR>
+nnoremap <leader>;; :!<Space>
+nnoremap <leader>o o<Esc>
+nnoremap <leader>O O<Esc>j
 nnoremap <leader>h :wincmd h<CR>
 nnoremap <leader>j :wincmd j<CR>
 nnoremap <leader>k :wincmd k<CR>
