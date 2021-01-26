@@ -9,7 +9,7 @@ set title cursorline ruler showcmd wildmenu
 set tabstop=4 softtabstop=4 shiftwidth=4 expandtab autoindent
 set incsearch hlsearch
 set splitbelow
-set hidden nobackup noswapfile undofile undodir=~/.vim/undo viminfo=""
+set hidden nobackup noswapfile undofile undodir=/tmp// viminfo=""
 set bg=dark
 set backspace=indent,eol,start
 set omnifunc=syntaxcomplete#Complete
@@ -58,14 +58,9 @@ nnoremap <C-left> :vert res -1<CR>
 nnoremap <C-right> :vert res +1<CR>
 nnoremap <leader><leader> :noh<CR>
 nnoremap <leader>w :w<CR>
-nnoremap <leader>zz :term<CR>
-nnoremap <leader>;; :!<Space>
+nnoremap <leader>;; <C-z>
 nnoremap <leader>o o<Esc>
 nnoremap <leader>O O<Esc>j
-nnoremap <leader>h :wincmd h<CR>
-nnoremap <leader>j :wincmd j<CR>
-nnoremap <leader>k :wincmd k<CR>
-nnoremap <leader>l :wincmd l<CR>
 
 inoremap <C-n> <C-x><C-o>
 inoremap <C-p> <C-x><C-o>

@@ -6,13 +6,6 @@ Currently using [Fedora 33 Workstation w/ GNOME](https://getfedora.org/).
 
 ### Setup
 
-1. Install `stow`.
-2. Clone repository into `~/Documents/dotfiles`.
-3. Navigate to `~/Documents/dotfiles`.
-4. Run `install.sh`.
-
-### Packages
-
-* stow
-* fzf
-* protonvpn-cli
+1. Clone repository into `~/Documents/dotfiles`.
+2. Navigate to `~/Documents/dotfiles`.
+3. Run `install.sh`.

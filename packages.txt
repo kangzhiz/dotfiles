@@ -1,0 +1,4 @@
+stow
+fzf
+protonvpn-cli
+cascadia-mono-fonts

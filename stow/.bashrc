@@ -37,25 +37,22 @@ alias dnfhist='dnf history --reverse'
 alias ..='cd ..'
 alias _desk='cd ~/Desktop'
 alias _docs='cd ~/Documents'
+alias _dots='cd ~/Documents/dotfiles'
 alias _down='cd ~/Downloads'
 
+alias vi='vim'
+alias vids='vi ~/Documents/dotfiles/stow'
+
 alias ls='ls -AFv --color'
-alias ll='ls -oh'
+alias lsl='ls -oh'
 alias tree='tree -CIa ".git|node_modules"'
 alias grep='grep -Rn --color --exclude-dir={.git,node_modules}'
 alias rm='rm -i'
-alias gg='exit'
 
 alias ff='firefox'
 alias term='gnome-terminal'
 alias naut='nautilus'
 alias open='gio open'
-
-alias v='vim'
-alias vpu='rm -f ~/.vim/undo/* && tree ~/.vim/undo'
-alias ebrc='v ~/Documents/dotfiles/stow/.bashrc'
-alias evrc='v ~/Documents/dotfiles/stow/.vimrc'
-alias egcf='v ~/Documents/dotfiles/stow/.gitconfig'
 
 alias g='git'
 alias gs='g s'
@@ -68,3 +65,5 @@ alias pyvd='deactivate'
 
 alias vpn='protonvpn'
 alias svpn='sudo protonvpn'
+
+alias gg='exit'

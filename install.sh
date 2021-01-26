@@ -1,9 +1,17 @@
 #!/usr/bin/env bash
 
+
 # check if repo was cloned into correct directory
-# some bash variables/aliases will be broken if dotfiles is in the wrong place
 if [ $PWD != "$HOME/Documents/dotfiles" ]; then
     echo 'Oops, wrong directory! Try cloning into ~/Documents/dotfiles.'
+    exit
+fi
+
+# install packages from packages.txt
+if [ -f packages.txt ]; then
+    sudo dnf install $(cat packages.txt)
+else
+    echo 'Error: packages.txt not found'
     exit
 fi
 
@@ -17,6 +25,7 @@ files_to_move=(
     "$HOME/.vimrc"
     "$HOME/.gitconfig"
 )
+
 for file in ${files_to_move[@]}
 do
     if [ -f $file ]; then
@@ -27,15 +36,10 @@ done
 # run stow to make symlinks in home directory
 stow -t $HOME stow
 
-# create vim undo directory
-if [ ! -d $HOME/.vim/undo ]; then
-    mkdir $HOME/.vim/undo
-fi
-
 # remove viminfo if it exists
 if [ -f $HOME/.viminfo ]; then
     rm $HOME/.viminfo
 fi
 
 # finished
-echo "Done."
+echo "Dotfiles setup done."
