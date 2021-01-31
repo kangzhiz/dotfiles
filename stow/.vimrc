@@ -47,8 +47,8 @@ highlight CursorLine guibg=#2e3440
 let mapleader = " "
 
 nnoremap <C-b> :ls<CR>:buffer<Space>
-nnoremap <C-n> :bnext<CR>
-nnoremap <C-p> :bprev<CR>
+nnoremap <C-n> :bn<CR>
+nnoremap <C-p> :bp<CR>
 nnoremap <C-t> :FZF<CR>
 nnoremap <C-f> :FZF ~<CR>
 nnoremap <C-h> :%s/
@@ -58,9 +58,13 @@ nnoremap <C-left> :vert res -1<CR>
 nnoremap <C-right> :vert res +1<CR>
 nnoremap <leader><leader> :noh<CR>
 nnoremap <leader>w :w<CR>
-nnoremap <leader>;; <C-z>
+nnoremap <leader>z <C-z>
+nnoremap <leader>; q:<Space>
 nnoremap <leader>o o<Esc>
-nnoremap <leader>O O<Esc>j
+nnoremap <leader>O O<Esc>
+nnoremap <leader>- <C-w>w
+nnoremap <leader>_ <C-w>x
+nnoremap <leader>= <C-w>=
 
 inoremap <C-n> <C-x><C-o>
 inoremap <C-p> <C-x><C-o>
