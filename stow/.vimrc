@@ -4,7 +4,7 @@ syntax on
 filetype plugin indent on
 
 set nocompatible noerrorbells termguicolors shellcmdflag=-ic
-set number relativenumber nowrap scrolloff=5 colorcolumn=80
+set number relativenumber nowrap scrolloff=5 colorcolumn=
 set title cursorline ruler showcmd wildmenu
 set tabstop=4 softtabstop=4 shiftwidth=4 expandtab autoindent
 set incsearch hlsearch
@@ -58,6 +58,7 @@ nnoremap <C-down> :res +1<CR>
 nnoremap <C-left> :vert res -1<CR>
 nnoremap <C-right> :vert res +1<CR>
 nnoremap <leader><leader> :noh<CR>
+nnoremap <leader>c :execute "set cc=" . (&cc == "" ? "80" : "")<CR>
 nnoremap <leader>w :w<CR>
 nnoremap <leader>z <C-z>
 nnoremap <leader>; q:<Space>
