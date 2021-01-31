@@ -52,23 +52,28 @@ nnoremap <C-n> :bn<CR>
 nnoremap <C-p> :bp<CR>
 nnoremap <C-t> :FZF<CR>
 nnoremap <C-f> :FZF ~<CR>
-nnoremap <C-h> :%s/
+nnoremap <C-h> :help<Space>
 nnoremap <C-up> :res -1<CR>
 nnoremap <C-down> :res +1<CR>
 nnoremap <C-left> :vert res -1<CR>
 nnoremap <C-right> :vert res +1<CR>
-nnoremap <leader><leader> :noh<CR>
-nnoremap <leader>\ :execute "set cc=" . (&cc == "" ? "80" : "")<CR>
+nnoremap <leader><leader> :execute "set cc=" . (&cc == "" ? "80" : "")<CR>
+nnoremap <leader><Enter> <C-z>
+nnoremap <leader>\ :noh<CR>
+nnoremap <leader>; :!<Space>
+nnoremap <leader>q q:<Space>
 nnoremap <leader>w :w<CR>
-nnoremap <leader>z <C-z>
-nnoremap <leader>; q:<Space>
 nnoremap <leader>o o<Esc>
 nnoremap <leader>O O<Esc>
+nnoremap <leader>ra :%s/
+nnoremap <leader>rl :s/
 nnoremap <leader>- <C-w>w
 nnoremap <leader>_ <C-w>x
 nnoremap <leader>= <C-w>=
 
 inoremap <C-n> <C-x><C-o>
 inoremap <C-p> <C-x><C-o>
+
+vnoremap <C-h> :s/
 
 autocmd BufWritePre * :%s/\s\+$//e
