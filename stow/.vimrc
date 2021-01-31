@@ -4,7 +4,7 @@ syntax on
 filetype plugin indent on
 
 set nocompatible noerrorbells termguicolors shellcmdflag=-ic
-set number relativenumber nowrap scrolloff=5
+set number relativenumber nowrap scrolloff=5 colorcolumn=80
 set title cursorline ruler showcmd wildmenu
 set tabstop=4 softtabstop=4 shiftwidth=4 expandtab autoindent
 set incsearch hlsearch
@@ -38,8 +38,9 @@ let g:python_highlight_all = 1
 let g:python_highlight_space_errors = 0
 
 colorscheme nord
-highlight Normal guibg=#1e1e1e guifg=#d8dee9
-highlight CursorLine guibg=#2e3440
+highlight Normal guibg=#1b1b1b guifg=#d8dee9
+highlight CursorLine guibg=#1b1b1b
+highlight Colorcolumn guibg=#2e3440
 
 
 """ custom keymappings
