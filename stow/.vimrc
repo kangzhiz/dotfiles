@@ -58,7 +58,7 @@ nnoremap <C-down> :res +1<CR>
 nnoremap <C-left> :vert res -1<CR>
 nnoremap <C-right> :vert res +1<CR>
 nnoremap <leader><leader> :noh<CR>
-nnoremap <leader>c :execute "set cc=" . (&cc == "" ? "80" : "")<CR>
+nnoremap <leader>\ :execute "set cc=" . (&cc == "" ? "80" : "")<CR>
 nnoremap <leader>w :w<CR>
 nnoremap <leader>z <C-z>
 nnoremap <leader>; q:<Space>
