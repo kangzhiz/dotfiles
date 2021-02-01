@@ -11,6 +11,8 @@ source /usr/share/fzf/shell/key-bindings.bash
 
 __git_complete g _git
 
+export NLTK_DATA='/home/k/Documents/school/nlp/nltk_data'
+
 
 ### prompt and terminal title
 
