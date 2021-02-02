@@ -24,10 +24,17 @@ PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME}: ${PWD}\007"'
 
 ### fzf settings
 
-FZF_IGNORE='! -path "*/.git/*" ! -path "*/node_modules/*"'
-export FZF_DEFAULT_COMMAND="find . -type f ${FZF_IGNORE} | cut -sd / -f 2-"
+FZF_IGNORE=' \
+! -path "*/.cache/*" \
+! -path "*/.mozilla/*" \
+! -path "*/Trash/*" \
+! -path "*/.git/*" \
+! -path "*/.venv/*" \
+! -path "*/node_modules/*"'
+
+export FZF_CTRL_T_COMMAND="find . -type f ${FZF_IGNORE} | cut -sd / -f 2-"
 export FZF_ALT_C_COMMAND="find . -type d ${FZF_IGNORE} | cut -sd / -f 2-"
-export FZF_CTRL_T_COMMAND=${FZF_DEFAULT_COMMAND}
+export FZF_DEFAULT_COMMAND=${FZF_CTRL_T_COMMAND}
 export FZF_DEFAULT_OPTS='--inline-info --reverse --height=21 --margin=0,0,0,3'
 
 
@@ -47,8 +54,8 @@ alias vids='vi ~/Documents/dotfiles/stow'
 
 alias ls='ls -AFv --color'
 alias lsl='ls -oh'
-alias tree='tree -CIa ".git|node_modules"'
-alias grep='grep -Rn --color --exclude-dir={.git,node_modules}'
+alias tree='tree -CIa ".git|.venv|node_modules"'
+alias grep='grep -Rn --color --exclude-dir={.git,.venv,node_modules}'
 alias rm='rm -i'
 
 alias ff='firefox'
