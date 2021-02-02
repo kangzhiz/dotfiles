@@ -11,6 +11,7 @@ source /usr/share/fzf/shell/key-bindings.bash
 
 __git_complete g _git
 
+PATH=$PATH:~/.local/kscripts
 export NLTK_DATA='/home/k/Documents/school/nlp/nltk_data'
 
 
@@ -25,6 +26,7 @@ PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME}: ${PWD}\007"'
 ### fzf settings
 
 FZF_IGNORE=' \
+! -path "*/kscripts/*" \
 ! -path "*/.cache/*" \
 ! -path "*/.mozilla/*" \
 ! -path "*/Trash/*" \
@@ -60,7 +62,7 @@ alias rm='rm -i'
 
 alias ff='firefox'
 alias term='gnome-terminal'
-alias naut='nautilus'
+alias naut='nautilus .'
 alias open='gio open'
 
 alias g='git'
