@@ -35,7 +35,7 @@
     p = push
     r = restore
     rs = restore -S
-    rstp = reset --soft @{1}
+    rst = reset --soft @{1}
     s = status -sb
     sd = !git diff --stat && git diff --stat --cached
     t = stash list

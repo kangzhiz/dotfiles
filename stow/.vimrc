@@ -7,7 +7,7 @@ set nocompatible noerrorbells termguicolors shellcmdflag=-ic
 set number relativenumber nowrap scrolloff=5 colorcolumn=
 set title cursorline ruler showcmd wildmenu
 set tabstop=4 softtabstop=4 shiftwidth=4 expandtab autoindent
-set splitbelow foldmethod=indent
+set splitbelow foldmethod=indent foldlevel=99
 set incsearch hlsearch
 set hidden nobackup noswapfile undofile undodir=/tmp// viminfo=""
 set bg=dark
