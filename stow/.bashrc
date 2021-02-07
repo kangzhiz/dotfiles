@@ -48,7 +48,7 @@ alias vids='vi ~/Documents/dotfiles/stow'
 alias ls='ls -AFv --color'
 alias lsl='ls -oh'
 alias tree='tree -CIa ".git|.venv|node_modules"'
-alias grep='rg --hidden -L -g "!.git/*"'
+alias grep='grep -Rn --color --exclude-dir={.git,.venv,node_modules}'
 alias rm='rm -i'
 
 alias ff='firefox'

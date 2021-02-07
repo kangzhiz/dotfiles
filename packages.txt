@@ -1,6 +1,5 @@
 stow
 fzf
 fd-find
-ripgrep
 protonvpn-cli
 cascadia-mono-fonts
