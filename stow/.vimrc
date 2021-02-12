@@ -8,7 +8,7 @@ set number relativenumber nowrap scrolloff=5 colorcolumn=
 set title cursorline ruler showcmd wildmenu
 set tabstop=4 softtabstop=4 shiftwidth=4 expandtab autoindent
 set splitbelow foldmethod=indent foldlevel=99
-set incsearch hlsearch
+set incsearch hlsearch ignorecase smartcase
 set hidden nobackup noswapfile undofile undodir=/tmp// viminfo=""
 set bg=dark
 set backspace=indent,eol,start
@@ -33,7 +33,10 @@ let g:nord_italic = 1
 let g:nord_italic_comments = 1
 let g:nord_underline = 1
 let g:fzf_layout = { 'window': { 'width': 0.9, 'height': 0.7 } }
+let g:sneak#prompt = 'SNEAK > '
 let g:sneak#label = 1
+let g:sneak#use_ic_scs = 1
+let g:sneak#target_labels = 'bcdefgmnqstuwyzBCDEFGHIJKLMNQSTUWYZ;/?'
 let g:python_highlight_all = 1
 let g:python_highlight_space_errors = 0
 
@@ -42,6 +45,7 @@ highlight Normal guibg=#1b1b1b guifg=#d8dee9
 highlight CursorLine guibg=#1b1b1b
 highlight Folded guibg=#1b1b1b
 highlight Colorcolumn guibg=#2e3440
+highlight SneakLabel guibg=#ebcb8b guifg=#1b1b1b
 
 
 """ custom keymappings
