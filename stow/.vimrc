@@ -63,7 +63,7 @@ nnoremap <C-k> zk
 nnoremap <leader><leader> :noh<CR>
 nnoremap <leader><Enter> <C-z>
 nnoremap <leader>q q:<Space>
-nnoremap <leader>\ :exe "set cc=" . (&cc == "" ? "80" : "")<CR>
+nnoremap <leader>\ :exe "set cc=" . (&cc == "" ? "81" : "")<CR>
 nnoremap <leader>- <C-w>v
 nnoremap <leader>_ <C-w>s
 nnoremap <leader>= <C-w>=
@@ -78,7 +78,7 @@ nnoremap <leader>O O<Esc>
 nnoremap <leader>ra :%s/
 nnoremap <leader>rl :s/
 nnoremap <leader>f zA
-nnoremap <leader>zz zM
+nnoremap <leader>zc zM
 nnoremap <leader>zo zR
 
 vnoremap <leader>r :s/
