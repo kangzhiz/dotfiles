@@ -4,7 +4,7 @@ syntax on
 filetype plugin indent on
 
 set nocompatible noerrorbells termguicolors shellcmdflag=-ic
-set number relativenumber nowrap scrolloff=5 colorcolumn=
+set number relativenumber nowrap scrolloff=5
 set title cursorline ruler showcmd wildmenu
 set tabstop=4 softtabstop=4 shiftwidth=4 expandtab autoindent
 set splitbelow foldmethod=indent foldlevel=99
@@ -55,15 +55,15 @@ let mapleader = " "
 nnoremap <C-b> :ls<CR>:buffer<Space>
 nnoremap <C-n> :bn<CR>
 nnoremap <C-p> :bp<CR>
-nnoremap <C-t> :FZF<CR>
-nnoremap <C-f> :FZF ~<CR>
+nnoremap <C-f> :file<CR>
 nnoremap <C-h> :h<Space>
 nnoremap <C-j> zj
 nnoremap <C-k> zk
 nnoremap <leader><leader> :noh<CR>
 nnoremap <leader><Enter> <C-z>
+nnoremap <leader>\ :FZF<CR>
 nnoremap <leader>q q:<Space>
-nnoremap <leader>\ :exe "set cc=" . (&cc == "" ? "81" : "")<CR>
+nnoremap <leader>cc :exe "set cc=" . (&cc == "" ? "80" :"")<CR>
 nnoremap <leader>- <C-w>v
 nnoremap <leader>_ <C-w>s
 nnoremap <leader>= <C-w>=
