@@ -44,7 +44,7 @@ colorscheme nord
 highlight Normal guibg=#1b1b1b guifg=#d8dee9
 highlight CursorLine guibg=#1b1b1b
 highlight Folded guibg=#1b1b1b
-highlight Colorcolumn guibg=#2e3440
+highlight Colorcolumn guibg=#3b4252
 highlight SneakLabel guibg=#ebcb8b guifg=#1b1b1b
 
 
@@ -63,7 +63,7 @@ nnoremap <leader><leader> :noh<CR>
 nnoremap <leader><Enter> <C-z>
 nnoremap <leader>\ :FZF<CR>
 nnoremap <leader>q q:<Space>
-nnoremap <leader>co :exe "set cc=" . (&cc == "" ? "80" :"")<CR>
+nnoremap <leader>c :exe "set cc=" . (&cc == "" ? "80" :"")<CR>
 nnoremap <leader>- <C-w>v
 nnoremap <leader>_ <C-w>s
 nnoremap <leader>= <C-w>=
