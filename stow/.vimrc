@@ -57,8 +57,10 @@ nnoremap <C-n> :bn<CR>
 nnoremap <C-p> :bp<CR>
 nnoremap <C-f> :file<CR>
 nnoremap <C-h> :h<Space>
-nnoremap <C-j> zj
-nnoremap <C-k> zk
+nnoremap <C-j> }
+nnoremap <C-k> {
+nnoremap } zj
+nnoremap { zk
 nnoremap <leader><leader> :noh<CR>
 nnoremap <leader><Enter> <C-z>
 nnoremap <leader>\ :FZF<CR>
