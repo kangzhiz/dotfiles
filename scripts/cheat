@@ -17,6 +17,8 @@ if __name__ == '__main__':
         subprocess.run(['curl', path])
     else:
         path = 'cheat.sh/{}/{}'.format(sys.argv[1], sys.argv[2])
+
+        # add additional arguments
         for term in sys.argv[3:]:
             path = path + '+' + term
         subprocess.run(['curl', path])
