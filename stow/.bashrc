@@ -38,7 +38,6 @@ alias dnfhist='dnf history --reverse'
 
 alias ..='cd ..'
 alias _desk='cd ~/Desktop'
-alias _down='cd ~/Downloads'
 alias _dots='cd ~/Documents/dotfiles'
 alias _site='cd ~/Documents/kangzhiz.github.io'
 
