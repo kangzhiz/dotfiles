@@ -11,7 +11,7 @@ source /usr/share/fzf/shell/key-bindings.bash
 
 __git_complete g _git
 
-PATH=$PATH:~/.local/kscripts
+PATH=$PATH:~/Documents/dotfiles/scripts
 export NLTK_DATA='/home/k/Documents/school/nlp/nltk_data'
 
 
@@ -28,7 +28,7 @@ PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME}: ${PWD}\007"'
 export FZF_CTRL_T_COMMAND="fd --type f -HL --color=always"
 export FZF_ALT_C_COMMAND="fd --type d -HL --color=always"
 export FZF_DEFAULT_COMMAND=${FZF_CTRL_T_COMMAND}
-export FZF_DEFAULT_OPTS='--inline-info --reverse --ansi --height=21 --margin=0,0,0,3'
+export FZF_DEFAULT_OPTS='--inline-info --reverse --ansi --height=21'
 
 
 ### custom aliases
@@ -38,9 +38,9 @@ alias dnfhist='dnf history --reverse'
 
 alias ..='cd ..'
 alias _desk='cd ~/Desktop'
-alias _docs='cd ~/Documents'
-alias _dots='cd ~/Documents/dotfiles'
 alias _down='cd ~/Downloads'
+alias _dots='cd ~/Documents/dotfiles'
+alias _site='cd ~/Documents/kangzhiz.github.io'
 
 alias vi='vim'
 alias vd='vimdiff'

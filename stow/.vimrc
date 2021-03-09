@@ -55,17 +55,15 @@ let mapleader = " "
 nnoremap <C-b> :ls<CR>:buffer<Space>
 nnoremap <C-n> :bn<CR>
 nnoremap <C-p> :bp<CR>
+nnoremap <C-t> :FZF<CR>
 nnoremap <C-f> :file<CR>
 nnoremap <C-h> :h<Space>
-nnoremap <C-j> }
-nnoremap <C-k> {
-nnoremap } zj
-nnoremap { zk
+nnoremap <C-j> zj
+nnoremap <C-k> zk
 nnoremap <leader><leader> :noh<CR>
 nnoremap <leader><Enter> <C-z>
-nnoremap <leader>\ :FZF<CR>
+nnoremap <leader>\ :exe "set cc=" . (&cc == "" ? "80" :"")<CR>
 nnoremap <leader>q q:<Space>
-nnoremap <leader>c :exe "set cc=" . (&cc == "" ? "80" :"")<CR>
 nnoremap <leader>h <C-w>h
 nnoremap <leader>j <C-w>j
 nnoremap <leader>k <C-w>k

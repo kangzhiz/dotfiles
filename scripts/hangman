@@ -1,0 +1,202 @@
+#!/usr/bin/env python3
+
+
+import sys
+import re
+import nltk
+from nltk.tokenize import RegexpTokenizer
+from nltk.corpus import stopwords
+from nltk.stem import WordNetLemmatizer
+from random import randint
+
+
+def print_list(lst, header):
+    """
+    Prints a list line by line.
+
+    Args:
+        lst (list): list to be printed
+        header (str): title for the list
+
+    """
+
+    print('\n' + header)
+
+    for i, val in enumerate(lst):
+        print(f'{i+1:5}. {val}')
+
+
+def preprocess(file):
+    """
+    Process raw text from the file to extract tokens for guessing game.
+
+    Args:
+        file (str): path/name of the file to be processed
+
+    Return:
+        list: all tokens from the text (after initial processing)
+        list: all nouns from the text (after initial processing)
+
+    """
+
+    with open(file, 'r') as f:
+        text = f.read().lower()
+
+    # use regex tokenizer to exclude numbers and punctuation
+    tokenizer = RegexpTokenizer(r'[a-z]+')
+    raw_tokens = tokenizer.tokenize(text)
+
+    # calculate and print lexical diversity
+    lexical_diversity = len(list(set(raw_tokens))) / len(raw_tokens)
+    print(f'Lexical Diversity: {lexical_diversity:.2f}')
+
+    # remove stopwords and words shorter than 5 characters
+    stops = stopwords.words('english')
+    tokens = [t for t in raw_tokens if t not in stops and len(t) > 5]
+
+    # lemmatize and get set of unique lemmas
+    wnl = WordNetLemmatizer()
+    lemmas = [wnl.lemmatize(t) for t in tokens]
+    unique_lemmas = list(set(lemmas))
+
+    # pos tagging
+    tags = nltk.pos_tag(unique_lemmas)
+    print_list(tags[:20], 'First 20 tagged words:')
+
+    # get nouns
+    nouns = [t[0] for t in tags if t[1].startswith('N')]
+
+    print('Number of tokens: {}'.format(len(tokens)))
+    print('Number of nouns: {}'.format(len(nouns)))
+
+    return tokens, nouns
+
+
+def get_most_common_words(tokens, targets, num=50):
+    """
+    Find the most common words in a list of tokens from a target list.
+
+    Args:
+        tokens (list): full list of tokens from a text
+        targets (list): list of words to count
+        num (int): number of results to return, 50 by default
+
+    Return:
+        list: most common words from targets found in tokens
+
+    """
+
+    # create dict for target tokens and their counts
+    counts = {t:tokens.count(t) for t in targets}
+
+    # sort target tokens based on counts
+    sorted_words = sorted(counts, key=counts.get, reverse=True)
+
+    # create word bank and a version with counts to be displayed
+    wb = sorted_words[:num]
+    wb_with_counts = [(w, counts[w]) for w in wb]
+
+    print_list(wb_with_counts, '50 most common nouns:')
+
+    return wb
+
+
+def play_guessing_game(wb, points=5):
+    """
+    Start a word guessing game using words from a provided word bank.
+
+    Args:
+        wb (list): list of words that can be used
+        points (int): number of points the user starts with
+
+    Return:
+        int: final points at the end of the game
+
+    """
+
+    # get random word from list
+    rand_i = randint(0, len(wb) - 1)
+    word = wb[rand_i]
+
+    # chosen word is stored as a list of tuples in the form:
+    # (letter (str), guessed (bool))
+    status = [(letter, False) for letter in word]
+    display_word(status)
+
+    # create set used to track which letters haved been guessed
+    guessed = set()
+
+    while True:
+        guess = input('Guess a letter: ')
+
+        if guess == '!':
+            print('Your final score is {}. Exiting game...'.format(points))
+            return points
+        elif len(guess) > 1 or guess.isalpha() == False:
+            print('Invalid input. Try again.')
+        elif guess in guessed:
+            print('Already guessed. Try again.')
+        else:
+            guessed.add(guess)
+
+            # check if guess is correct
+            if guess in word:
+                status = [(lt[0], lt[0] in guessed) for lt in status]
+                points += 1
+                print('Right! Your score is {}'.format(points))
+            else:
+                points -= 1
+                print('Sorry, guess again. Your score is {}'.format(points))
+
+                # exit if score is negative
+                if points < 0:
+                    print('You have run out of points.')
+                    print('The word was {}'.format(word))
+                    return points
+
+        if display_word(status) == 0:
+            print('You solved it! Your score is {}'.format(points))
+            print('\nGuess another word')
+            return play_guessing_game(wb, points)
+
+
+def display_word(word):
+    """
+    Display the word in the correct format for the guessing game.
+
+    Args:
+        word (list): list of tuples, where each tuple indicates a letter
+            in the word and whether or not that letter has been guessed
+
+    Return:
+        int: number of unguessed letters left
+
+    """
+
+    string = ''
+
+    for letter in word:
+        if letter[1]:
+            string += letter[0]
+        else:
+            string += '_'
+        string += ' '
+
+    print(string)
+    return string.count('_')
+
+
+if __name__ == '__main__':
+    if len(sys.argv) > 1:
+        print('Input file: ', sys.argv[1])
+
+        tokens, nouns = preprocess(sys.argv[1])
+        word_bank = get_most_common_words(tokens, nouns)
+
+        print("Let's play a word guessing game!")
+        play_guessing_game(word_bank)
+    else:
+        print('Error: text file not provided')
+
+    # print on termination
+    print('Program terminated.')
