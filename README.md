@@ -12,7 +12,6 @@ Currently using [Fedora 33 Workstation w/ GNOME](https://getfedora.org/).
 
 ### Scripts
 
-* **caesar**: *WIP, based on a school assignment*
-* **cheat** : *A shortcut for cheat.sh*
-* **fontest**: *A way to quickly evaluate a new font*
-* **hangman**: *WIP, based on a school assignment*
+* cheat : *a shortcut for cheat.sh*
+* fontest: *a quick test run for new fonts*
+* hangman: *a simple game of hangman*

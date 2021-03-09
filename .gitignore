@@ -3,3 +3,6 @@ stash/
 
 # used for testing
 test/
+
+# python cache
+__pycache__/
