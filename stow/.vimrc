@@ -7,7 +7,7 @@ set nocompatible noerrorbells termguicolors shellcmdflag=-ic
 set number relativenumber nowrap scrolloff=5
 set title cursorline ruler showcmd wildmenu
 set tabstop=4 softtabstop=4 shiftwidth=4 expandtab autoindent
-set splitbelow foldmethod=indent foldlevel=99
+set splitbelow foldmethod=indent foldlevel=99 foldtext=FoldText()
 set incsearch hlsearch ignorecase smartcase
 set hidden nobackup noswapfile undofile undodir=/tmp// viminfo=""
 set bg=dark
@@ -56,7 +56,7 @@ nnoremap <C-b> :ls<CR>:buffer<Space>
 nnoremap <C-n> :bn<CR>
 nnoremap <C-p> :bp<CR>
 nnoremap <C-t> :FZF<CR>
-nnoremap <C-f> :file<CR>
+nnoremap <C-f> :FZF ..<CR>
 nnoremap <C-h> :h<Space>
 nnoremap <C-j> zj
 nnoremap <C-k> zk
@@ -83,3 +83,11 @@ inoremap <C-n> <C-x><C-o>
 inoremap <C-p> <C-x><C-o>
 
 autocmd BufWritePre * :%s/\s\+$//e
+
+
+""" functions
+
+function! FoldText()
+    let linecount = v:foldend - v:foldstart + 1
+    return '+ ' . linecount . ' lines folded '
+endfunction
