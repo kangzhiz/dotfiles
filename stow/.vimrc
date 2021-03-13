@@ -4,7 +4,7 @@ syntax on
 filetype plugin indent on
 
 set nocompatible noerrorbells termguicolors shellcmdflag=-ic
-set number relativenumber nowrap scrolloff=5
+set number relativenumber nowrap scrolloff=5 colorcolumn=80
 set title cursorline ruler showcmd wildmenu
 set tabstop=4 softtabstop=4 shiftwidth=4 expandtab autoindent
 set splitbelow foldmethod=indent foldlevel=99 foldtext=FoldText()
