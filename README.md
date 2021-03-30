@@ -2,7 +2,7 @@
 
 Just some of my dotfiles and scripts.
 
-Currently using [Fedora 33 Workstation w/ GNOME](https://getfedora.org/).
+Currently using [Fedora 33 Workstation](https://getfedora.org/).
 
 ### Setup
 
