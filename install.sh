@@ -3,20 +3,26 @@
 
 # check if repo was cloned into the correct directory
 if [ $PWD != "$HOME/Documents/dotfiles" ]; then
-    echo 'Oops, wrong directory! Try cloning into ~/Documents/dotfiles.'
+    printf "Oops, wrong directory! Cloning into ~/Documents/dotfiles.\n"
     exit
 fi
 
+
 # install listed packages from official repos
+printf "\nInstalling packages from official repos...\n\n"
+
 if [ -f packages/fedora.txt ]; then
     sudo dnf install $(cat packages/fedora.txt)
 else
-    echo 'Error: packages/fedora.txt not found.'
+    printf "\nError: packages/fedora.txt not found.\n"
     exit
 fi
 
+
 # move existing files into backup directory
-if [ ! -d 'stash' ]; then
+printf "\nCreating backups...\n"
+
+if [ ! -d "stash" ]; then
     mkdir stash
 fi
 
@@ -33,21 +39,33 @@ do
     fi
 done
 
+
 # run stow to create symlinks
+printf "\nStowing files...\n"
 stow -t $HOME stow
 
+
 # install python packages
+printf "\nInstalling Python packages...\n\n"
+
 if [ -f packages/python.txt ]; then
-    python3 -m pip install -r packages/python.txt --user
+    python3 -m pip install -r packages/python.txt --user >/dev/null
 else
-    echo 'Error: packages/python.txt not found.'
+    printf "\nError: packages/python.txt not found.\n"
     exit
 fi
 
+printf "Python packages:\n\n"
+python3 -m pip list --user
+
+
 # remove viminfo if it exists
+printf "\nFinal cleanup...\n\n"
+
 if [ -f $HOME/.viminfo ]; then
     rm $HOME/.viminfo
 fi
 
+
 # finished
-echo "Dotfiles setup done."
+printf "Dotfiles setup done.\n\n"
