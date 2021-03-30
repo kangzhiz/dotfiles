@@ -1,0 +1,2 @@
+Greg>=0.4.7
+python3-pip-autoremove>=0.9.1

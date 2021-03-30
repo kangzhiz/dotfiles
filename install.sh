@@ -1,17 +1,17 @@
 #!/usr/bin/env bash
 
 
-# check if repo was cloned into correct directory
+# check if repo was cloned into the correct directory
 if [ $PWD != "$HOME/Documents/dotfiles" ]; then
     echo 'Oops, wrong directory! Try cloning into ~/Documents/dotfiles.'
     exit
 fi
 
-# install packages from packages.txt
-if [ -f packages.txt ]; then
-    sudo dnf install $(cat packages.txt)
+# install listed packages from official repos
+if [ -f packages/fedora.txt ]; then
+    sudo dnf install $(cat packages/fedora.txt)
 else
-    echo 'Error: packages.txt not found'
+    echo 'Error: packages/fedora.txt not found.'
     exit
 fi
 
@@ -33,8 +33,16 @@ do
     fi
 done
 
-# run stow to make symlinks in home directory
+# run stow to create symlinks
 stow -t $HOME stow
+
+# install python packages
+if [ -f packages/python.txt ]; then
+    python3 -m pip install -r packages/python.txt --user
+else
+    echo 'Error: packages/python.txt not found.'
+    exit
+fi
 
 # remove viminfo if it exists
 if [ -f $HOME/.viminfo ]; then
