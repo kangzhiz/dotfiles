@@ -9,9 +9,9 @@ source /usr/share/bash-completion/completions/git
 source /usr/share/git-core/contrib/completion/git-prompt.sh
 source /usr/share/fzf/shell/key-bindings.bash
 
-__git_complete g _git
+__git_complete git _git
 
-PATH=$PATH:~/Documents/dotfiles/scripts
+PATH=$PATH:~/Documents/dotfiles/scripts:~/.local/bin
 export NLTK_DATA='/home/k/Documents/school/nlp/nltk_data'
 
 
@@ -64,11 +64,13 @@ alias pymvenv='py -m venv .venv'
 alias pyva='source .venv/bin/activate'
 alias pyvd='deactivate'
 alias pip='py -m pip'
-alias pipi='pip install'
-alias pipu='pip uninstall'
+alias pipf='pip freeze'
+alias pipin='pip install --user'
+alias pipun='pip uninstall'
+alias pipuna='pip3-autoremove'
+alias pipup='pipin --upgrade pip'
 alias pips='pip list'
-alias pipup='pip install --upgrade pip'
-alias pipf='pip freeze > requirements.txt'
+alias pipsu='pips --user'
 
 alias vpn='protonvpn'
 alias svpn='sudo protonvpn'
