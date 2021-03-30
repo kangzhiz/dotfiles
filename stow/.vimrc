@@ -5,9 +5,9 @@ filetype plugin indent on
 
 set nocompatible noerrorbells termguicolors shellcmdflag=-ic
 set number relativenumber nowrap scrolloff=5 colorcolumn=80
-set title cursorline ruler showcmd wildmenu
+set title cursorline ruler showcmd wildmenu splitbelow
 set tabstop=4 softtabstop=4 shiftwidth=4 expandtab autoindent
-set splitbelow foldmethod=indent foldlevel=99 foldtext=FoldText()
+set foldmethod=indent foldlevel=99 foldtext=FoldText()
 set incsearch hlsearch ignorecase smartcase
 set hidden nobackup noswapfile undofile undodir=/tmp// viminfo=""
 set bg=dark
@@ -42,6 +42,7 @@ let g:python_highlight_space_errors = 0
 
 colorscheme nord
 highlight Normal guibg=#1b1b1b guifg=#d8dee9
+highlight Normal guibg=#1b1b1b
 highlight CursorLine guibg=#1b1b1b
 highlight Folded guibg=#1b1b1b
 highlight Colorcolumn guibg=#3b4252
@@ -56,7 +57,7 @@ nnoremap <C-b> :ls<CR>:buffer<Space>
 nnoremap <C-n> :bn<CR>
 nnoremap <C-p> :bp<CR>
 nnoremap <C-t> :FZF<CR>
-nnoremap <C-f> :FZF ..<CR>
+nnoremap <C-f> :FZF ~<CR>
 nnoremap <C-h> :h<Space>
 nnoremap <C-j> zj
 nnoremap <C-k> zk
