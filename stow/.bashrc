@@ -12,7 +12,6 @@ source /usr/share/fzf/shell/key-bindings.bash
 __git_complete git _git
 
 PATH=$PATH:~/Documents/dotfiles/scripts:~/.local/bin
-export NLTK_DATA='/home/k/Documents/school/nlp/nltk_data'
 
 
 ### prompt and terminal title
@@ -38,6 +37,7 @@ alias dnfhist='dnf history --reverse'
 
 alias ..='cd ..'
 alias _desk='cd ~/Desktop'
+alias _down='cd ~/Downloads'
 alias _dots='cd ~/Documents/dotfiles'
 alias _site='cd ~/Documents/kangzhiz.github.io'
 
