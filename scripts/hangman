@@ -96,6 +96,11 @@ def display_word(word):
 
 
 if __name__ == '__main__':
+    """
+    Main driver
+
+    """
+
     if len(sys.argv) > 1:
         print('Input file: ', sys.argv[1])
 

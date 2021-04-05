@@ -25,6 +25,11 @@ def display_text(text, form):
 
 
 if __name__ == '__main__':
+    """
+    Main driver
+
+    """
+
     text = """\
     ABCDEFGHIJKLMNOPQRSTUVWXYZ
     abcdefghijklmnopqrstuvwxyz

@@ -10,6 +10,11 @@ import subprocess
 
 
 if __name__ == '__main__':
+    """
+    Main driver
+
+    """
+
     if len(sys.argv) < 2:
         print('No search query provided')
     elif len(sys.argv) == 2:
