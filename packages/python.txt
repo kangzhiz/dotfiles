@@ -1,1 +1,2 @@
-python3-pip-autoremove >= 0.9.1
+python3-pip-autoremove
+tldr
