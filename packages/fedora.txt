@@ -3,3 +3,4 @@ fzf
 fd-find
 protonvpn-cli
 cascadia-mono-fonts
+gpodder
