@@ -61,6 +61,11 @@ nnoremap <C-f> :FZF ~<CR>
 nnoremap <C-h> :h<Space>
 nnoremap <C-j> zj
 nnoremap <C-k> zk
+nnoremap == <C-w>=
+nnoremap J }
+nnoremap K {
+nnoremap <leader>J J
+nnoremap <leader>K kJ
 nnoremap <leader><leader> :noh<CR>
 nnoremap <leader><Enter> <C-z>
 nnoremap <leader>\ :exe "set cc=" . (&cc == "" ? "80" :"")<CR>
