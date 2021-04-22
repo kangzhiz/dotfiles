@@ -64,6 +64,8 @@ nnoremap <C-k> zk
 nnoremap == <C-w>=
 nnoremap J }
 nnoremap K {
+nnoremap H 0
+nnoremap L $
 nnoremap <leader>J J
 nnoremap <leader>K kJ
 nnoremap <leader><leader> :noh<CR>
