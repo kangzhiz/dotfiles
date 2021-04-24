@@ -1,3 +1,3 @@
 ### nltk path
 
-export NLTK_DATA=~/Documents/school/nlp/nltk_data
+export NLTK_DATA=~/Documents/utd/nlp/nltk_data

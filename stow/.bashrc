@@ -11,7 +11,7 @@ source /usr/share/fzf/shell/key-bindings.bash
 
 __git_complete git _git
 
-PATH=$PATH:~/Documents/dotfiles/scripts:~/.local/bin
+PATH=$PATH:~/Documents/scripts:~/.local/bin
 
 
 ### prompt and terminal title
@@ -40,7 +40,6 @@ alias _desk='cd ~/Desktop'
 alias _docs='cd ~/Documents'
 alias _down='cd ~/Downloads'
 alias _dots='cd ~/Documents/dotfiles'
-alias _site='cd ~/Documents/kangzhiz.github.io'
 
 alias vi='vim'
 alias vd='vimdiff'
