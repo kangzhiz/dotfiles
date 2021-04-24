@@ -4,7 +4,7 @@ syntax on
 filetype plugin indent on
 
 set nocompatible noerrorbells termguicolors shellcmdflag=-ic
-set number relativenumber nowrap scrolloff=5 colorcolumn=80
+set number relativenumber nowrap scrolloff=5 colorcolumn=
 set title cursorline ruler showcmd wildmenu splitbelow
 set tabstop=4 softtabstop=4 shiftwidth=4 expandtab autoindent
 set foldmethod=indent foldlevel=99 foldtext=FoldText()
@@ -20,6 +20,7 @@ set omnifunc=syntaxcomplete#Complete
 call plug#begin('~/.vim/plugged')
 Plug 'arcticicestudio/nord-vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() }}
+Plug 'junegunn/goyo.vim'
 Plug 'justinmk/vim-sneak'
 Plug 'tmsvg/pear-tree'
 Plug 'tpope/vim-commentary'
@@ -40,13 +41,15 @@ let g:sneak#target_labels = 'bcdefgmnqstuwyzBCDEFGHIJKLMNQSTUWYZ;/?'
 let g:python_highlight_all = 1
 let g:python_highlight_space_errors = 0
 
+augroup nord-overrides
+    autocmd!
+    au ColorScheme nord hi Normal guifg=#d8dee9 ctermbg=NONE guibg=NONE
+    au ColorScheme nord hi CursorLine ctermbg=NONE guibg=NONE
+    au ColorScheme nord hi Folded guibg=NONE
+    au ColorScheme nord hi ColorColumn guibg=#2e3440
+    au ColorScheme nord hi Sneak guifg=#1b1b1b guibg=#d08770
+augroup END
 colorscheme nord
-highlight Normal guibg=#1b1b1b guifg=#d8dee9
-highlight Normal guibg=#1b1b1b
-highlight CursorLine guibg=#1b1b1b
-highlight Folded guibg=#1b1b1b
-highlight Colorcolumn guibg=#3b4252
-highlight SneakLabel guibg=#ebcb8b guifg=#1b1b1b
 
 
 """ custom keymappings
@@ -84,16 +87,17 @@ nnoremap <leader>rl :s/
 nnoremap <leader>f zA
 nnoremap <leader>- zM
 nnoremap <leader>= zR
+nnoremap <leader>g :Goyo<CR>
 
 vnoremap <leader>r :s/
 
 inoremap <C-n> <C-x><C-o>
 inoremap <C-p> <C-x><C-o>
 
-autocmd BufWritePre * :%s/\s\+$//e
-
 
 """ functions
+
+autocmd BufWritePre * :%s/\s\+$//e
 
 function! FoldText()
     let linecount = v:foldend - v:foldstart + 1
