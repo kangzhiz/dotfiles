@@ -3,3 +3,7 @@ stash/
 
 # used for testing
 test/
+
+# for python scripts
+__pycache__/
+.venv/

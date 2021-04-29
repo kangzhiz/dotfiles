@@ -1,0 +1,29 @@
+#!/usr/bin/env python3
+
+"""
+A shortcut for cheat.sh.
+
+"""
+
+import sys
+import subprocess
+
+
+if __name__ == '__main__':
+    """
+    Main driver
+
+    """
+
+    if len(sys.argv) < 2:
+        print('No search query provided')
+    elif len(sys.argv) == 2:
+        path = 'cheat.sh/{}'.format(sys.argv[1])
+        subprocess.run(['curl', path])
+    else:
+        path = 'cheat.sh/{}/{}'.format(sys.argv[1], sys.argv[2])
+
+        # add additional arguments
+        for term in sys.argv[3:]:
+            path = path + '+' + term
+        subprocess.run(['curl', path])

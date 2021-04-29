@@ -11,7 +11,7 @@ source /usr/share/fzf/shell/key-bindings.bash
 
 __git_complete git _git
 
-PATH=$PATH:~/Documents/scripts:~/.local/bin
+PATH=$PATH:~/Documents/dotfiles/scripts:~/.local/bin
 
 
 ### prompt and terminal title
