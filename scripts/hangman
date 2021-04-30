@@ -5,69 +5,10 @@ A simple game of hangman.
 
 """
 
-# TODO: Remove unnecessary NLTK stuff and only play a single round.
+import random
+
 # TODO: Retrieve words using some online API.
 # TODO: Figure out how many lives to allow.
-
-
-def play_guessing_game(wb, points=5):
-    """
-    Start a word guessing game using words from a provided word bank.
-
-    Args:
-        wb (list): list of words that can be used
-        points (int): number of points the user starts with
-
-    Return:
-        int: final points at the end of the game
-
-    """
-
-    # get random word from list
-    rand_i = randint(0, len(wb) - 1)
-    word = wb[rand_i]
-
-    # chosen word is stored as a list of tuples in the form:
-    # (letter (str), guessed (bool))
-    status = [(letter, False) for letter in word]
-    display_word(status)
-
-    # create set used to track which letters haved been guessed
-    guessed = set()
-
-    while True:
-        guess = input('Guess a letter: ')
-
-        if guess == '!':
-            print('Your final score is {}. Exiting game...'.format(points))
-            return points
-        elif len(guess) > 1 or guess.isalpha() == False:
-            print('Invalid input. Try again.')
-        elif guess in guessed:
-            print('Already guessed. Try again.')
-        else:
-            guessed.add(guess)
-
-            # check if guess is correct
-            if guess in word:
-                status = [(lt[0], lt[0] in guessed) for lt in status]
-                points += 1
-                print('Right! Your score is {}'.format(points))
-            else:
-                points -= 1
-                print('Sorry, guess again. Your score is {}'.format(points))
-
-                # exit if score is negative
-                if points < 0:
-                    print('You have run out of points.')
-                    print('The word was {}'.format(word))
-                    return points
-
-        if display_word(status) == 0:
-            print('You solved it! Your score is {}'.format(points))
-            print('\nGuess another word')
-            return play_guessing_game(wb, points)
-
 
 def display_word(word):
     """
@@ -95,22 +36,70 @@ def display_word(word):
     return string.count('_')
 
 
+def play(wb, lives=5):
+    """
+    Start a word guessing game using words from a provided word bank.
+
+    Args:
+        wb (list): list of words that can be used
+        lives (int): number of lives the user starts with
+
+    """
+
+    print('You are starting with {} lives.'.format(lives))
+
+    # get random word from list
+    rand_i = random.randint(0, len(wb) - 1)
+    word = wb[rand_i]
+
+    # chosen word is stored as a list of tuples in the form:
+    # (letter (str), guessed (bool))
+    status = [(letter, False) for letter in word]
+    display_word(status)
+
+    # create set used to track which letters haved been guessed
+    guessed = set()
+
+    while True:
+        guess = input('Guess a letter: ')
+
+        if guess == '!':
+            print('The word was {}. Goodbye!'.format(word.upper()))
+            return
+        elif len(guess) > 1 or guess.isalpha() == False:
+            print('Invalid guess. Try again.')
+        elif guess in guessed:
+            print('Letter already guessed. Try again.')
+        else:
+            guessed.add(guess)
+
+            # check guess
+            if guess in word:
+                status = [(lt[0], lt[0] in guessed) for lt in status]
+                print('Correct!')
+            else:
+                lives -= 1
+
+                # exit when out of lives
+                if lives < 1:
+                    print('Sorry, you have run out of lives.')
+                    print('The word was {}'.format(word.upper()))
+                    return
+                else:
+                    print('Incorrect. {} lives remaining'.format(lives))
+
+            if display_word(status) == 0:
+                print('You solved it with {} lives remaining!'.format(lives))
+                return
+
+
 if __name__ == '__main__':
     """
-    Main driver
+    Program driver
 
     """
 
-    if len(sys.argv) > 1:
-        print('Input file: ', sys.argv[1])
+    temp_wordbank = ['cat', 'dog', 'fish', 'pig', 'cow']
 
-        tokens, nouns = preprocess(sys.argv[1])
-        word_bank = get_most_common_words(tokens, nouns)
-
-        print("Let's play a word guessing game!")
-        play_guessing_game(word_bank)
-    else:
-        print('Error: text file not provided')
-
-    # print on termination
-    print('Program terminated.')
+    print("Let's play hangman! Enter ! at any time to exit.")
+    play(temp_wordbank)
