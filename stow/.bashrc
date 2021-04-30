@@ -60,7 +60,7 @@ alias g='git'
 alias gs='g s'
 
 alias py='python3'
-alias pyvm='py -m venv .venv'
+alias pymv='py -m venv .venv'
 alias pyva='source .venv/bin/activate'
 alias pyvd='deactivate'
 alias pip='py -m pip'
