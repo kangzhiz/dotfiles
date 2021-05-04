@@ -34,6 +34,7 @@ export FZF_DEFAULT_OPTS='--inline-info --reverse --ansi --height=21'
 
 alias sudnf='sudo dnf'
 alias dnfhist='dnf history --reverse'
+alias flat='flatpak'
 
 alias ..='cd ..'
 alias _desk='cd ~/Desktop'
@@ -50,6 +51,7 @@ alias lsl='ls -oh'
 alias tree='tree -CIa ".git|.venv|node_modules"'
 alias grep='grep -Rn --color --exclude-dir={.git,.venv,node_modules}'
 alias rm='rm -i'
+alias bc='bc -q'
 
 alias ff='firefox'
 alias term='gnome-terminal'
