@@ -90,8 +90,8 @@ nnoremap <C-f> :file<CR>
 nnoremap <C-h> :h<Space>
 nnoremap <C-j> }
 nnoremap <C-k> {
-nnoremap J 4j
-nnoremap K 4k
+nnoremap J 8j
+nnoremap K 8k
 nnoremap H 0
 nnoremap L $
 nnoremap == <C-w>=
