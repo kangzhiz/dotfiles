@@ -12,8 +12,8 @@
     a = add
     aa = add -A
     ac = !git add -A && git commit -m
-    aca = !git add -A && git commit --ammend -m
-    acan = !git add -A && git commit --ammend --no-edit
+    aca = !git add -A && git commit --amend -m
+    acan = !git add -A && git commit --amend --no-edit
     b = branch
     ba = branch -a
     bd = branch -d
