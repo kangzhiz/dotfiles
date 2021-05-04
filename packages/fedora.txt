@@ -3,3 +3,5 @@ fzf
 fd-find
 protonvpn-cli
 cascadia-mono-fonts
+gnome-2048
+gnome-mines
