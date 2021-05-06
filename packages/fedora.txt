@@ -5,3 +5,6 @@ protonvpn-cli
 cascadia-mono-fonts
 gnome-2048
 gnome-mines
+gnome-tetravex
+gnome-mahjongg
+aisleriot
