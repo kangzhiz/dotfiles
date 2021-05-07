@@ -9,7 +9,7 @@ fi
 
 
 # install listed packages from official repos
-printf "\nInstalling packages from official repos...\n\n"
+printf "\nInstalling packages from official repos...\n"
 
 if [ -f packages/fedora.txt ]; then
     sudo dnf install $(cat packages/fedora.txt)
@@ -22,8 +22,8 @@ fi
 # move existing files into backup directory
 printf "\nCreating backups...\n"
 
-if [ ! -d "stash" ]; then
-    mkdir stash
+if [ ! -d "backup" ]; then
+    mkdir backup
 fi
 
 files_to_move=(
@@ -35,7 +35,7 @@ files_to_move=(
 for file in ${files_to_move[@]}
 do
     if [ -f $file ]; then
-        mv $file stash
+        mv $file backup
     fi
 done
 
@@ -46,7 +46,7 @@ stow -t $HOME stow
 
 
 # install python packages
-printf "\nInstalling Python packages...\n\n"
+printf "\nInstalling Python packages...\n"
 
 if [ -f packages/python.txt ]; then
     python3 -m pip install -r packages/python.txt --user >/dev/null
@@ -55,13 +55,20 @@ else
     exit
 fi
 
-printf "Python packages:\n\n"
-python3 -m pip list --user
+
+# remove unnecessary default packages
+printf "\nRemoving unnecessary default packages...\n"
+
+if [ -f packages/uninstall.txt ]; then
+    sudo dnf remove $(cat packages/uninstall.txt)
+else
+    printf "\nError: packages/uninstall.txt not found.\n"
+    exit
+fi
 
 
 # remove viminfo if it exists
 printf "\nFinal cleanup...\n\n"
-
 if [ -f $HOME/.viminfo ]; then
     rm $HOME/.viminfo
 fi
