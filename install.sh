@@ -7,16 +7,24 @@ if [ $PWD != "$HOME/Documents/dotfiles" ]; then
     exit
 fi
 
-
-# install listed packages from official repos
-printf "\nInstalling packages from official repos...\n"
-
-if [ -f packages/fedora.txt ]; then
-    sudo dnf install $(cat packages/fedora.txt)
-else
-    printf "\nError: packages/fedora.txt not found.\n"
+# check if all necessary files for installation are present
+if [ ! -f packages/fedora.txt ]; then
+    printf "Installation stopped: packages/fedora.txt not found.\n"
     exit
 fi
+if [ ! -f packages/python.txt ]; then
+    printf "Installation stopped: packages/python.txt not found.\n"
+    exit
+fi
+if [ ! -f packages/uninstall.txt ]; then
+    printf "Installation stopped: packages/uninstall.txt not found.\n"
+    exit
+fi
+
+
+# install listed packages from official repos
+printf "Installing packages from official repos...\n"
+sudo dnf install $(cat packages/fedora.txt)
 
 
 # move existing files into backup directory
@@ -28,8 +36,9 @@ fi
 
 files_to_move=(
     "$HOME/.bashrc"
-    "$HOME/.vimrc"
     "$HOME/.gitconfig"
+    "$HOME/.profile"
+    "$HOME/.vimrc"
 )
 
 for file in ${files_to_move[@]}
@@ -47,32 +56,20 @@ stow -t $HOME stow
 
 # install python packages
 printf "\nInstalling Python packages...\n"
-
-if [ -f packages/python.txt ]; then
-    python3 -m pip install -r packages/python.txt --user >/dev/null
-else
-    printf "\nError: packages/python.txt not found.\n"
-    exit
-fi
+python3 -m pip install -r packages/python.txt --user >/dev/null
 
 
 # remove unnecessary default packages
 printf "\nRemoving unnecessary default packages...\n"
-
-if [ -f packages/uninstall.txt ]; then
-    sudo dnf remove $(cat packages/uninstall.txt)
-else
-    printf "\nError: packages/uninstall.txt not found.\n"
-    exit
-fi
+sudo dnf remove $(cat packages/uninstall.txt)
 
 
-# remove viminfo if it exists
-printf "\nFinal cleanup...\n\n"
+# clean up any extra files
+printf "\nFinal clean up...\n\n"
 if [ -f $HOME/.viminfo ]; then
     rm $HOME/.viminfo
 fi
 
 
 # finished
-printf "Dotfiles setup done.\n\n"
+printf "Dotfiles setup done.\n"

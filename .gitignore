@@ -1,5 +1,5 @@
 # backups of default files
-stash/
+backup/
 
 # used for testing
 test/
