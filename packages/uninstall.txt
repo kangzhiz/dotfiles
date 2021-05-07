@@ -1,3 +1,4 @@
 cheese
 evince
+gnome-logs
 gnome-screenshot
