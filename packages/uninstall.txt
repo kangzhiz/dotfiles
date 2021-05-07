@@ -1,4 +1,7 @@
 cheese
 evince
+gnome-calendar
 gnome-logs
+gnome-maps
 gnome-screenshot
+gnome-weather
