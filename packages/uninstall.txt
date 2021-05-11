@@ -1,5 +1,4 @@
 cheese
-evince
 gnome-calendar
 gnome-logs
 gnome-maps
