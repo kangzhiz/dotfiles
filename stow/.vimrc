@@ -88,10 +88,10 @@ nnoremap <C-p> :bp<CR>
 nnoremap <C-t> :FZF<CR>
 nnoremap <C-f> :file<CR>
 nnoremap <C-h> :h<Space>
-nnoremap <C-j> }
-nnoremap <C-k> {
-nnoremap J 8j
-nnoremap K 8k
+nnoremap <C-j> 8j
+nnoremap <C-k> 8k
+nnoremap J }
+nnoremap K {
 nnoremap H 0
 nnoremap L $
 nnoremap == <C-w>=
@@ -116,6 +116,10 @@ nnoremap <leader>K kJ$
 nnoremap <leader>o o<Esc>
 nnoremap <leader>O O<Esc>
 
+vnoremap <C-j> 8j
+vnoremap <C-k> 8k
+vnoremap J }
+vnoremap K {
 vnoremap H 0
 vnoremap L $
 vnoremap <leader>r :s/
