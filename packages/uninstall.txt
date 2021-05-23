@@ -4,3 +4,4 @@ gnome-logs
 gnome-maps
 gnome-screenshot
 gnome-weather
+gnome-tour
