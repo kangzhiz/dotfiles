@@ -1,6 +1,6 @@
 {
   "manifest_version": 2,
-  "version": "1.0",
+  "version": "1.1",
   "name": "K's Dark Theme",
   "theme": {
     "images": {},
@@ -17,6 +17,7 @@
       "popup_text": "rgb(225, 225, 225)",
       "icons": "rgb(177, 177, 177)",
       "ntp_background": "rgb(27, 27, 27)",
+      "popup_highlight": "rgb(60, 60, 60)",
       "tab_selected": "rgb(60, 60, 60)",
       "toolbar_field_border_focus": "rgb(65, 65, 65)",
       "tab_loading": "rgb(48, 48, 48)"
