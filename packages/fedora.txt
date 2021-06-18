@@ -1,4 +1,6 @@
 stow
+vim-enhanced
+gnome-tweaks
 fzf
 fd-find
 protonvpn-cli

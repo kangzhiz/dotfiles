@@ -1,5 +1,12 @@
 gnome-calendar
+gnome-contacts
 gnome-logs
 gnome-maps
+gnome-photos
 gnome-screenshot
 gnome-tour
+gnome-weather
+libreoffice*
+rhythmbox
+simple-scan
+yelp
