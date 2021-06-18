@@ -69,6 +69,12 @@ printf "\nFinal clean up...\n\n"
 if [ -f $HOME/.viminfo ]; then
     rm $HOME/.viminfo
 fi
+if [ -f $HOME/.bash_logout ]; then
+    rm $HOME/.bash_logout
+fi
+if [ -f $HOME/.bash_profile ]; then
+    rm $HOME/.bash_profile
+fi
 
 
 # finished
