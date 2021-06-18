@@ -115,6 +115,7 @@ nnoremap <leader>J J$
 nnoremap <leader>K kJ$
 nnoremap <leader>o o<Esc>
 nnoremap <leader>O O<Esc>
+nnoremap <leader># :set nu! rnu!<CR>
 
 vnoremap <C-j> 8j
 vnoremap <C-k> 8k
