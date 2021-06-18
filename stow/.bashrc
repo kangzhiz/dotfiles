@@ -78,3 +78,8 @@ alias vpn='protonvpn'
 alias svpn='sudo protonvpn'
 
 alias gg='exit'
+
+
+### startup
+
+eval $(dircolors)
