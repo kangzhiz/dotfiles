@@ -1,4 +1,5 @@
 gnome-calendar
+gnome-clocks
 gnome-contacts
 gnome-logs
 gnome-maps

@@ -6,5 +6,4 @@ fzf
 fd-find
 protonvpn-cli
 epiphany
-apostrophe
 gcolor3
