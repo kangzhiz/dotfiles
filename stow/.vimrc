@@ -66,6 +66,7 @@ let g:sneak#use_ic_scs = 1
 let g:sneak#target_labels = 'bcdefgmnqstuwyzBCDEFGHIJKLMNQSTUWYZ;/?'
 let g:python_highlight_all = 1
 let g:python_highlight_space_errors = 0
+let g:python_highlight_file_headers_as_comments = 1
 
 augroup nord-overrides
     autocmd!
