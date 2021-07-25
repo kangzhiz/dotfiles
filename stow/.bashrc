@@ -44,7 +44,7 @@ alias _dots='cd ~/Documents/dotfiles'
 
 alias vi='vim'
 alias vd='vimdiff'
-alias vids='vi ~/Documents/dotfiles/stow'
+alias vdots='vi ~/Documents/dotfiles/stow'
 
 alias ls='ls -AFv --color'
 alias lsl='ls -oh'
