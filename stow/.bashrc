@@ -43,8 +43,8 @@ alias _down='cd ~/Downloads'
 alias _dots='cd ~/Documents/dotfiles'
 
 alias vi='vim'
+alias vids='vi ~/Documents/dotfiles/stow'
 alias vd='vimdiff'
-alias vdots='vi ~/Documents/dotfiles/stow'
 
 alias ls='ls -AFv --color'
 alias lsl='ls -oh'
