@@ -8,23 +8,23 @@ if [ $PWD != "$HOME/Documents/dotfiles" ]; then
 fi
 
 # check if all necessary files for installation are present
-if [ ! -f packages/fedora.txt ]; then
-    printf "Installation stopped: packages/fedora.txt not found.\n"
+if [ ! -f packages/fedora-install.txt ]; then
+    printf "Installation stopped: packages/fedora-install.txt not found.\n"
     exit
 fi
-if [ ! -f packages/python.txt ]; then
-    printf "Installation stopped: packages/python.txt not found.\n"
+if [ ! -f packages/pip.txt ]; then
+    printf "Installation stopped: packages/pip.txt not found.\n"
     exit
 fi
-if [ ! -f packages/uninstall.txt ]; then
-    printf "Installation stopped: packages/uninstall.txt not found.\n"
+if [ ! -f packages/fedora-uninstall.txt ]; then
+    printf "Installation stopped: packages/fedora-uninstall.txt not found.\n"
     exit
 fi
 
 
 # install listed packages from official repos
 printf "Installing packages from official repos...\n"
-sudo dnf install $(cat packages/fedora.txt)
+sudo dnf install $(cat packages/fedora-install.txt)
 
 
 # move existing files into backup directory
@@ -56,12 +56,12 @@ stow -t $HOME stow
 
 # install python packages
 printf "\nInstalling Python packages...\n"
-python3 -m pip install -r packages/python.txt --user >/dev/null
+python3 -m pip install -r packages/pip.txt --user >/dev/null
 
 
 # remove unnecessary default packages
 printf "\nRemoving unnecessary default packages...\n"
-sudo dnf remove $(cat packages/uninstall.txt)
+sudo dnf remove $(cat packages/fedora-uninstall.txt)
 
 
 # clean up any extra files
