@@ -6,3 +6,4 @@ fzf
 fd-find
 protonvpn-cli
 gcolor3
+youtube-dl

@@ -10,4 +10,5 @@ gnome-weather
 libreoffice*
 rhythmbox
 simple-scan
+totem
 yelp
