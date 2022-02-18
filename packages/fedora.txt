@@ -1,0 +1,6 @@
+stow
+git
+vim-enhanced
+tree
+fzf
+fd-find

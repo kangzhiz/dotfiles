@@ -39,9 +39,16 @@ set viminfo=""
 set backspace=indent,eol,start
 set omnifunc=syntaxcomplete#Complete
 set bg=dark
+set mouse=a
 
 
 """ plugins and plugin settings
+
+let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
+if empty(glob(data_dir . '/autoload/plug.vim'))
+  silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
 
 call plug#begin('~/.vim/plugged')
 Plug 'arcticicestudio/nord-vim'

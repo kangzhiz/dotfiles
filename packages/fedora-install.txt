@@ -1,9 +1,0 @@
-stow
-vim-enhanced
-cascadia-mono-fonts
-gnome-tweaks
-fzf
-fd-find
-protonvpn-cli
-gcolor3
-youtube-dl

@@ -2,36 +2,31 @@
 
 
 # check if repo was cloned into the correct directory
-if [ $PWD != "$HOME/Documents/dotfiles" ]; then
-    printf "Oops, wrong directory! Cloning into ~/Documents/dotfiles.\n"
+if [ $PWD != "$HOME/dotfiles" ]; then
+    printf "Oops, wrong directory! Cloning into ~/dotfiles.\n"
     exit
 fi
 
 # check if all necessary files for installation are present
-if [ ! -f packages/fedora-install.txt ]; then
-    printf "Installation stopped: packages/fedora-install.txt not found.\n"
+if [ ! -f packages/fedora.txt ]; then
+    printf "Installation stopped: packages/fedora.txt not found.\n"
     exit
 fi
 if [ ! -f packages/pip.txt ]; then
     printf "Installation stopped: packages/pip.txt not found.\n"
     exit
 fi
-if [ ! -f packages/fedora-uninstall.txt ]; then
-    printf "Installation stopped: packages/fedora-uninstall.txt not found.\n"
-    exit
-fi
-
 
 # install listed packages from official repos
 printf "Installing packages from official repos...\n"
-sudo dnf install $(cat packages/fedora-install.txt)
+sudo dnf install $(cat packages/fedora.txt)
 
 
 # move existing files into backup directory
 printf "\nCreating backups...\n"
 
-if [ ! -d "backup" ]; then
-    mkdir backup
+if [ ! -d "backups" ]; then
+    mkdir backups
 fi
 
 files_to_move=(
@@ -44,7 +39,7 @@ files_to_move=(
 for file in ${files_to_move[@]}
 do
     if [ -f $file ]; then
-        mv $file backup
+        mv $file backups
     fi
 done
 
@@ -57,11 +52,6 @@ stow -t $HOME stow
 # install python packages
 printf "\nInstalling Python packages...\n"
 python3 -m pip install -r packages/pip.txt --user >/dev/null
-
-
-# remove unnecessary default packages
-printf "\nRemoving unnecessary default packages...\n"
-sudo dnf remove $(cat packages/fedora-uninstall.txt)
 
 
 # clean up any extra files

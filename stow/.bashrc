@@ -6,19 +6,22 @@ bind 'set completion-ignore-case on'
 bind 'set show-all-if-ambiguous on'
 
 source /usr/share/bash-completion/completions/git
-source /usr/share/git-core/contrib/completion/git-prompt.sh
 source /usr/share/fzf/shell/key-bindings.bash
 
 __git_complete git _git
 
-PATH=$PATH:~/Documents/dotfiles/scripts:~/.local/bin
+PATH=$PATH:~/dotfiles/scripts:~/.local/bin
 
 
 ### prompt and terminal title
 
+git_branch() {
+    git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/' -e 's/$/ /'
+}
+
 COLOR1='\[\033[1;36m\]'
 COLOR2='\[\033[1;32m\]'
-PS1="${COLOR1}\W ${COLOR2}\$(__git_ps1 '%s ')${COLOR1}\$ \[\e[m\]"
+PS1="${COLOR1}\W ${COLOR2}\$(git_branch)${COLOR1}\$ \[\e[m\]"
 PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME}: ${PWD}\007"'
 
 
@@ -37,13 +40,11 @@ alias dnfhist='dnf history --reverse'
 alias flat='flatpak'
 
 alias ..='cd ..'
-alias _desk='cd ~/Desktop'
-alias _docs='cd ~/Documents'
-alias _down='cd ~/Downloads'
-alias _dots='cd ~/Documents/dotfiles'
+alias _dots='cd ~/dotfiles'
+alias _site='cd ~/kangzhiz.github.io'
 
 alias vi='vim'
-alias vids='vi ~/Documents/dotfiles/stow'
+alias vids='vi ~/dotfiles/stow'
 alias vd='vimdiff'
 
 alias ls='ls -AFv --color'
@@ -52,11 +53,6 @@ alias tree='tree -CIa ".git|.venv|node_modules"'
 alias grep='grep -Rn --color --exclude-dir={.git,.venv,node_modules}'
 alias rm='rm -i'
 alias bc='bc -q'
-
-alias ff='firefox'
-alias term='gnome-terminal'
-alias naut='nautilus .'
-alias open='gio open'
 
 alias g='git'
 alias gs='g s'
@@ -73,9 +69,6 @@ alias pipuna='pip3-autoremove'
 alias pipup='pipin --upgrade pip'
 alias pips='pip list'
 alias pipsu='pips --user'
-
-alias vpn='protonvpn'
-alias svpn='sudo protonvpn'
 
 alias gg='exit'
 
