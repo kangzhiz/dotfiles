@@ -42,6 +42,7 @@ alias flat='flatpak'
 alias ..='cd ..'
 alias _dots='cd ~/dotfiles'
 alias _site='cd ~/kangzhiz.github.io'
+alias _win='cd /mnt/c/Users/kzhao'
 
 alias vi='vim'
 alias vids='vi ~/dotfiles/stow'

@@ -4,3 +4,4 @@ vim-enhanced
 tree
 fzf
 fd-find
+pip
