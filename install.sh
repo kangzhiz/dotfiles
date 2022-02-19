@@ -8,8 +8,8 @@ if [ $PWD != "$HOME/dotfiles" ]; then
 fi
 
 # check if all necessary files for installation are present
-if [ ! -f packages/fedora.txt ]; then
-    printf "Installation stopped: packages/fedora.txt not found.\n"
+if [ ! -f packages/ubuntu.txt ]; then
+    printf "Installation stopped: packages/ubuntu.txt not found.\n"
     exit
 fi
 if [ ! -f packages/pip.txt ]; then
@@ -19,7 +19,7 @@ fi
 
 # install listed packages from official repos
 printf "Installing packages from official repos...\n"
-sudo dnf install $(cat packages/fedora.txt)
+sudo apt install $(cat packages/ubuntu.txt)
 
 
 # move existing files into backup directory

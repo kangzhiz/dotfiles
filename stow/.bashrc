@@ -6,7 +6,7 @@ bind 'set completion-ignore-case on'
 bind 'set show-all-if-ambiguous on'
 
 source /usr/share/bash-completion/completions/git
-source /usr/share/fzf/shell/key-bindings.bash
+# source /usr/share/fzf/shell/key-bindings.bash
 
 __git_complete git _git
 
@@ -35,9 +35,7 @@ export FZF_DEFAULT_OPTS='--inline-info --reverse --ansi --height=21'
 
 ### custom aliases
 
-alias sudnf='sudo dnf'
-alias dnfhist='dnf history --reverse'
-alias flat='flatpak'
+alias sapt='sudo apt'
 
 alias ..='cd ..'
 alias _dots='cd ~/dotfiles'
@@ -49,7 +47,7 @@ alias vids='vi ~/dotfiles/stow'
 alias vd='vimdiff'
 
 alias ls='ls -AFv --color'
-alias lsl='ls -oh'
+alias ll='ls -oh'
 alias tree='tree -CIa ".git|.venv|node_modules"'
 alias grep='grep -Rn --color --exclude-dir={.git,.venv,node_modules}'
 alias rm='rm -i'
