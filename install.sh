@@ -43,6 +43,10 @@ do
     fi
 done
 
+# make sure the config directory exists
+if [ ! -d "$HOME/.config" ]; then
+    mkdir $HOME/.config
+fi
 
 # run stow to create symlinks
 printf "\nStowing files...\n"
