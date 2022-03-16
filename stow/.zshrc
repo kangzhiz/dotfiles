@@ -24,17 +24,15 @@ export FZF_DEFAULT_OPTS='--inline-info --reverse --ansi --height=21'
 
 alias ..='cd ..'
 alias _dots='cd ~/Documents/dotfiles'
-alias _site='cd ~/kangzhiz.github.io'
-alias _win='cd /mnt/c/Users/kzhao'
+alias _site='cd ~/Documents/kangzhiz.github.io'
 
 alias vi='vim'
-alias vids='vi ~/dotfiles/stow'
+alias vids='vi ~/Documents/dotfiles/stow'
 alias vd='vimdiff'
 
-alias ls='ls -AFv --color'
-alias ll='ls -oh'
-alias tree='tree -CIa ".git|.venv|node_modules"'
-alias grep='grep -Rn --color --exclude-dir={.git,.venv,node_modules}'
+alias ls='ls -AFohv --color'
+alias tree='tree -CIa ".git|.venv"'
+alias grep='grep -Rn --color --exclude-dir={.git,.venv}'
 alias rm='rm -i'
 alias bc='bc -q'
 
