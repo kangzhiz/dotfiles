@@ -1,8 +1,12 @@
 # dotfiles
 
-Just my dotfiles and some miscellaneous Python scripts.
+Just my dotfiles and some miscellaneous shell scripts.
 
 Currently using macOS Monterey.
+
+## Installing Homebrew
+
+See instructions [here](https://brew.sh)
 
 ## Setting up SSH key
 
@@ -14,6 +18,3 @@ See instructions [here](https://docs.github.com/en/authentication/connecting-to-
 2. Navigate to `~/Documents/dotfiles`.
 3. Run `install.sh`.
 
-## TODO
-
-1. Separate install script for python packages and scripts?

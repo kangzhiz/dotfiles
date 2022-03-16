@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+
+
+read -r -d '' TEXT << EOM
+ABCDEFGHIJKLMNOPQRSTUVWXYZ
+abcdefghijklmnopqrstuvwxyz
+1234567890 !@#$%^&* <=<>=>
+~~==__--++ :; "'\` ,. ? \|/
+B80O9LIil17 5Ss2Zz ({[]})
+EOM
+
+# print standard
+echo "$TEXT"
+echo ""
+
+# print bold
+echo -e "\033[1m${TEXT}\033[0m"
+echo ""
+
+# print italics
+echo -e "\033[3m${TEXT}\033[0m"
