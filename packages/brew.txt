@@ -1,3 +1,5 @@
+stow
+neovim
 pyenv
 openssl
 readline
@@ -6,3 +8,6 @@ xz
 zlib
 fzf
 fd
+grip
+homebrew/cask-fonts/font-cascadia-mono
+macchina

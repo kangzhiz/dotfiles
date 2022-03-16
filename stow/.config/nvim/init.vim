@@ -3,9 +3,7 @@
 syntax on
 filetype plugin indent on
 
-set nocompatible
 set noerrorbells
-set termguicolors
 set shellcmdflag=-ic
 set number
 set relativenumber
@@ -14,40 +12,24 @@ set scrolloff=5
 set colorcolumn=
 set title
 set cursorline
-set ruler
-set showcmd
-set wildmenu
 set splitbelow
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
-set expandtab
-set autoindent
 set foldmethod=indent
 set foldlevel=99
 set foldtext=FoldText()
-set incsearch
-set hlsearch
 set ignorecase
 set smartcase
-set hidden
+set startofline
 set nobackup
 set noswapfile
 set undofile
-set undodir=~/.vim/undo-dir
 set viminfo=""
-set backspace=indent,eol,start
-set omnifunc=syntaxcomplete#Complete
 set bg=dark
 set mouse=a
 
 """ plugins and plugin settings
-
-let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
-if empty(glob(data_dir . '/autoload/plug.vim'))
-  silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
-  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
-endif
 
 call plug#begin('~/.vim/plugged')
 Plug 'gruvbox-community/gruvbox'
@@ -71,10 +53,6 @@ let g:sneak#target_labels = 'bcdefgmnqstuwyzBCDEFGHIJKLMNQSTUWYZ;/?'
 let g:python_highlight_all = 1
 let g:python_highlight_space_errors = 0
 let g:python_highlight_file_headers_as_comments = 1
-
-" necessary for italics
-let &t_ZH="\e[3m"
-let &t_ZR="\e[23m"
 
 colorscheme gruvbox
 
