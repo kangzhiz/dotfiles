@@ -1,5 +1,5 @@
 # backups of default files
-backup/
+backups/
 
 # used for testing
 test/
