@@ -52,6 +52,7 @@ endif
 
 call plug#begin('~/.vim/plugged')
 Plug 'arcticicestudio/nord-vim'
+Plug 'morhetz/gruvbox'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() }}
 Plug 'junegunn/goyo.vim'
 Plug 'justinmk/vim-sneak'
@@ -127,14 +128,18 @@ nnoremap <leader># :set nu! rnu!<CR>
 
 vnoremap <C-j> 8j
 vnoremap <C-k> 8k
+vnoremap <C-c> <Esc>
 vnoremap J }
 vnoremap K {
 vnoremap H 0
 vnoremap L $
 vnoremap <leader>r :s/
+vnoremap > >gv
+vnoremap < <gv
 
 inoremap <C-n> <C-x><C-o>
 inoremap <C-p> <C-x><C-o>
+inoremap <C-c> <Esc>
 
 
 """ functions
