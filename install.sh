@@ -25,10 +25,12 @@ else
     exit
 fi
 
-# clean up any extra files
-printf "\nFinal clean up...\n\n"
-if [ -f $HOME/.viminfo ]; then
-    rm $HOME/.viminfo
+# clean up home directory
+if [ -f $DOTFILES_DIR/scripts/clean-home ]; then
+    source $DOTFILES_DIR/scripts/clean-home
+else
+    printf "Error! \"scripts/clean-home\" is missing.\n"
+    exit
 fi
 
 printf "Dotfiles setup done.\n"

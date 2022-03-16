@@ -34,13 +34,12 @@ set hidden
 set nobackup
 set noswapfile
 set undofile
-set undodir=/tmp//
+set undodir=~/.vim/undo-dir
 set viminfo=""
 set backspace=indent,eol,start
 set omnifunc=syntaxcomplete#Complete
 set bg=dark
 set mouse=a
-
 
 """ plugins and plugin settings
 

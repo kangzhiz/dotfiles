@@ -6,9 +6,9 @@ STOW_DIR="$DOTFILES_DIR/stow"
 
 printf "\nInstalling dotfiles to home directory...\n"
 
+# create directories if necessary
 printf "\nCreating missing directories...\n"
 
-# Create directories if necessary
 for dir in $(find $STOW_DIR -type d); do
     dir_to_create=${dir/$STOW_DIR/"$HOME"}
 
@@ -18,14 +18,14 @@ for dir in $(find $STOW_DIR -type d); do
     fi
 done
 
+# create backups directory
 printf "\nCreating backups...\n"
 
-# Create backups directory
 if [ ! -d "$DOTFILES_DIR/backups" ]; then
     mkdir $DOTFILES_DIR/backups
 fi
 
-# Look for any files that could cause issues with stow and make backups
+# look for any files that could cause issues with stow and make backups
 for stow_file in $(find $STOW_DIR -type f); do
     file_to_move=${stow_file/$STOW_DIR/"$HOME"}
 
@@ -35,6 +35,7 @@ for stow_file in $(find $STOW_DIR -type f); do
     fi
 done
 
+# stow dotfiles
 printf "\nStowing files...\n"
 
 (cd $DOTFILES_DIR; stow -t $HOME stow)
