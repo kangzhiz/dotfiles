@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 
 
-STOW_DIR="$HOME/Documents/dotfiles/stow"
+DOTFILES_DIR="$HOME/Documents/dotfiles"
+STOW_DIR="$DOTFILES_DIR/stow"
 
 printf "\nInstalling dotfiles to home directory...\n"
 
@@ -20,8 +21,8 @@ done
 printf "\nCreating backups...\n"
 
 # Create backups directory
-if [ ! -d "backups" ]; then
-    mkdir backups
+if [ ! -d "$DOTFILES_DIR/backups" ]; then
+    mkdir $DOTFILES_DIR/backups
 fi
 
 # Look for any files that could cause issues with stow and make backups
@@ -36,7 +37,7 @@ done
 
 printf "\nStowing files...\n"
 
-stow -t $HOME stow
+(cd $DOTFILES_DIR; stow -t $HOME stow)
 
 printf "Done.\n"
 
