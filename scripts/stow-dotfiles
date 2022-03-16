@@ -31,7 +31,7 @@ for stow_file in $(find $STOW_DIR -type f); do
 
     if [ -f $file_to_move ]; then
         echo $file_to_move
-        mv $file_to_move backups
+        mv $file_to_move $DOTFILES_DIR/backups
     fi
 done
 
