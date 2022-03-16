@@ -1,0 +1,8 @@
+pyenv
+openssl
+readline
+sqlite3
+xz
+zlib
+fzf
+fd

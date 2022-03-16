@@ -1,0 +1,42 @@
+#!/usr/bin/env bash
+
+
+STOW_DIR="$HOME/Documents/dotfiles/stow"
+
+printf "\nInstalling dotfiles to home directory...\n"
+
+printf "\nCreating missing directories...\n"
+
+# Create directories if necessary
+for dir in $(find $STOW_DIR -type d); do
+    dir_to_create=${dir/$STOW_DIR/"$HOME"}
+
+    if [ ! -d $dir_to_create ]; then
+        echo $dir_to_create
+        mkdir $dir_to_create
+    fi
+done
+
+printf "\nCreating backups...\n"
+
+# Create backups directory
+if [ ! -d "backups" ]; then
+    mkdir backups
+fi
+
+# Look for any files that could cause issues with stow and make backups
+for stow_file in $(find $STOW_DIR -type f); do
+    file_to_move=${stow_file/$STOW_DIR/"$HOME"}
+
+    if [ -f $file_to_move ]; then
+        echo $file_to_move
+        mv $file_to_move backups
+    fi
+done
+
+printf "\nStowing files...\n"
+
+stow -t $HOME stow
+
+printf "Done.\n"
+

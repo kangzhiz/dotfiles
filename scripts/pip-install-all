@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+
+# make sure pip.txt exists
+if [ ! -f packages/pip.txt ]; then
+    printf "Installation stopped: packages/pip.txt not found.\n"
+    exit
+fi
+
+# install packages
+printf "Installing packages from PyPI...\n"
+python3 -m pip install -r packages/pip.txt --user >/dev/null

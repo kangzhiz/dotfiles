@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+
+# make sure brew.txt exists
+if [ ! -f packages/brew.txt ]; then
+    printf "Installation stopped: packages/brew.txt not found.\n"
+    exit
+fi
+
+# install packages
+printf "Installing packages from Homebrew...\n"
+brew install $(cat packages/brew.txt)
