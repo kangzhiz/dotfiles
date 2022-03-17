@@ -3,19 +3,10 @@
 
 printf "\nCleaning up home...\n\n"
 
-# make sure necessary vim directories are exist
-if [ ! -d $HOME/.vim ]; then
-    mkdir $HOME/.vim
-fi
-if [ ! -d $HOME/.vim/undo-dir ]; then
-    mkdir $HOME/.vim/undo-dir
-fi
-
-
 # remove unnecessary files in home directory
 if [ -f $HOME/.viminfo ]; then
     rm $HOME/.viminfo
 fi
 
 # clean up vim undo files
-find $HOME/.vim/undo-dir -type f -mtime +90 -delete
+find $HOME/.local/share/nvim/undo -type f -mtime +90 -delete
