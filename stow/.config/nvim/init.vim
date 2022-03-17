@@ -27,12 +27,13 @@ set noswapfile
 set undofile
 set viminfo=""
 set bg=dark
-set mouse=a
+set guicursor+=n-v:hor50,r:block
 
 """ plugins and plugin settings
 
-call plug#begin('~/.vim/plugged')
+call plug#begin('~/.local/share/nvim/plugged')
 Plug 'gruvbox-community/gruvbox'
+Plug 'tpope/vim-obsession'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() }}
 Plug 'junegunn/goyo.vim'
 Plug 'justinmk/vim-sneak'
@@ -43,7 +44,7 @@ call plug#end()
 
 let g:netrw_banner = 0
 let g:gruvbox_italic = 1
-let g:gruvbox_contrast_dark = 'hard'
+let g:gruvbox_contrast_dark = 'medium'
 let g:gruvbox_invert_selection = 0
 let g:fzf_layout = { 'window': { 'width': 0.9, 'height': 0.7 } }
 let g:sneak#prompt = 'SNEAK > '
@@ -61,6 +62,7 @@ colorscheme gruvbox
 
 let mapleader = " "
 
+nnoremap <C-c> <Esc>
 nnoremap <C-b> :ls<CR>:buffer<Space>
 nnoremap <C-n> :bn<CR>
 nnoremap <C-p> :bp<CR>
@@ -78,9 +80,8 @@ nnoremap <silent><leader><leader> :noh <bar> set nospell<CR>
 nnoremap <silent><leader>\ :exe "set cc=" . (&cc == "" ? "80" :"")<CR>
 nnoremap <silent><leader>s :setlocal spell! spelllang=en_us<CR>
 nnoremap <silent><leader>g :Goyo<CR>
-nnoremap <leader><Enter> <C-z>
+nnoremap <leader>q <C-z>
 nnoremap <leader>w :w<CR>
-nnoremap <leader>q q:<Space>
 nnoremap <leader>ra :%s/
 nnoremap <leader>rl :s/
 nnoremap <leader>h <C-w>h
@@ -115,6 +116,20 @@ inoremap <C-c> <Esc>
 """ functions
 
 autocmd BufWritePre * :%s/\s\+$//e
+
+command Session :call CreateNewSession()
+
+function! CreateNewSession()
+	let path = getcwd() . '/.vim'
+	let response = confirm('Create a new vim session ' . path . '/Session.vim?', "&Y\n&N", 2)
+
+	if response == 1
+		if !isdirectory(path)
+			call mkdir(path)
+		endif
+		:Obsession .vim/Session.vim
+	endif
+endfunction
 
 function! FoldText()
     let linecount = v:foldend - v:foldstart + 1
