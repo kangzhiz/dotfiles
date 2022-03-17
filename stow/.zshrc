@@ -32,8 +32,6 @@ alias _site='cd ~/Documents/kangzhiz.github.io'
 
 alias vi='nvim'
 alias vis='vi -S .vim/Session.vim'
-alias vids='vi ~/Documents/dotfiles/stow'
-alias nvc='vi ~/Documents/dotfiles/stow/.config/nvim'
 
 alias ls='ls -AFohv --color'
 alias tree='tree -CIa ".git|.venv"'
