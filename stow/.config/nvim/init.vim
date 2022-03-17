@@ -62,7 +62,6 @@ colorscheme gruvbox
 
 let mapleader = " "
 
-nnoremap <C-c> <Esc>
 nnoremap <C-b> :ls<CR>:buffer<Space>
 nnoremap <C-n> :bn<CR>
 nnoremap <C-p> :bp<CR>
@@ -99,7 +98,6 @@ nnoremap <leader># :set nu! rnu!<CR>
 
 vnoremap <C-j> 8j
 vnoremap <C-k> 8k
-vnoremap <C-c> <Esc>
 vnoremap J }
 vnoremap K {
 vnoremap H 0
@@ -110,7 +108,6 @@ vnoremap < <gv
 
 inoremap <C-n> <C-x><C-o>
 inoremap <C-p> <C-x><C-o>
-inoremap <C-c> <Esc>
 
 
 """ functions
