@@ -5,13 +5,13 @@ PATH=$PATH:~/Documents/dotfiles/scripts:~/.local/bin
 autoload -Uz compinit && compinit
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 
-### prompt and terminal title
+### prompt
 
 autoload -Uz vcs_info
 precmd() { vcs_info }
 zstyle ':vcs_info:git:*' formats ' (%b)'
 setopt PROMPT_SUBST
-PROMPT='%F{blue}%1d%F{green}${vcs_info_msg_0_} %F{red}$ %f'
+PROMPT='%F{blue}%~%F{green}${vcs_info_msg_0_} %F{red}$ %f'
 
 ### fzf settings
 
