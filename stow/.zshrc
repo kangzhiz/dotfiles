@@ -15,6 +15,7 @@ PROMPT='%F{blue}%~%F{green}${vcs_info_msg_0_} %F{red}$ %f'
 
 ### fzf settings
 
+source "/opt/homebrew/opt/fzf/shell/key-bindings.zsh"
 export FZF_CTRL_T_COMMAND="fd --type f -HL --color=always"
 export FZF_ALT_C_COMMAND="fd --type d -HL --color=always"
 export FZF_DEFAULT_COMMAND=${FZF_CTRL_T_COMMAND}
@@ -56,5 +57,4 @@ alias gg='exit'
 
 ### startup
 
-# eval $(dircolors)
 eval "$(pyenv init -)"

@@ -1,4 +1,7 @@
 .git
-Trash
+.venv
+.pyenv
+.Trash
 .cache
-.mozilla
+Library
+.zsh_sessions
