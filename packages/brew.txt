@@ -12,3 +12,4 @@ grip
 homebrew/cask-fonts/font-cascadia-mono
 macchina
 karabiner-elements
+node
