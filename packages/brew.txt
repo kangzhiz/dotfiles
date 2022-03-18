@@ -6,10 +6,11 @@ readline
 sqlite3
 xz
 zlib
+node
 fzf
 fd
+macchina
 grip
 homebrew/cask-fonts/font-cascadia-mono
-macchina
+visual-studio-code
 karabiner-elements
-node
