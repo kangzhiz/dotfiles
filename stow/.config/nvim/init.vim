@@ -16,6 +16,7 @@ set splitbelow
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
+set expandtab
 set foldmethod=indent
 set foldlevel=99
 set foldtext=FoldText()
@@ -117,15 +118,15 @@ autocmd BufWritePre * :%s/\s\+$//e
 command Session :call CreateNewSession()
 
 function! CreateNewSession()
-	let path = getcwd() . '/.vim'
-	let response = confirm('Create a new vim session ' . path . '/Session.vim?', "&Y\n&N", 2)
+    let path = getcwd() . '/.vim'
+    let response = confirm('Create a new vim session ' . path . '/Session.vim?', "&Y\n&N", 2)
 
-	if response == 1
-		if !isdirectory(path)
-			call mkdir(path)
-		endif
-		:Obsession .vim/Session.vim
-	endif
+    if response == 1
+        if !isdirectory(path)
+            call mkdir(path)
+        endif
+        :Obsession .vim/Session.vim
+    endif
 endfunction
 
 function! FoldText()

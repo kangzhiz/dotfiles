@@ -3,17 +3,17 @@
     email = kangzhiz@pm.me
 
 [core]
-	excludesfile = ~/.gitignore
+    excludesfile = ~/.gitignore
 
 [diff]
     tool = vimdiff
 
 [alias]
     aa = add -A
-	bo = checkout -b
-	com = commit -m
-	coma = commit --amend --no-edit
-	comma = commit --amend -m
+    bo = checkout -b
+    com = commit -m
+    coma = commit --amend --no-edit
+    comma = commit --amend -m
     cl = clone
     d = diff
     dc = diff --cached
@@ -21,7 +21,7 @@
     l = log --oneline --graph
     ll = log --stat --graph
     lll = log --patch-with-stat --graph
-	o = checkout
+    o = checkout
     p = push
     rest = restore
     rests = restore -S
