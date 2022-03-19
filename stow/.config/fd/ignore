@@ -1,7 +1,8 @@
+.cache
 .git
-.venv
 .pyenv
 .Trash
-.cache
-Library
+.venv
 .zsh_sessions
+Library
+node_modules

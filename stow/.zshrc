@@ -34,8 +34,8 @@ alias vi='nvim'
 alias vis='vi -S .vim/Session.vim'
 
 alias ls='ls -AFohv --color'
-alias tree='tree -CIa ".git|.venv"'
-alias grep='grep -Rn --color --exclude-dir={.git,.venv}'
+alias tree='tree -CIa ".git|.venv|node_modules"'
+alias grep='grep -Rn --color --exclude-dir={.git,.venv,node_modules}'
 alias rm='rm -i'
 alias bc='bc -q'
 
