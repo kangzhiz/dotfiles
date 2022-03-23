@@ -34,8 +34,10 @@ set guicursor+=n-v:hor50,r:block
 
 call plug#begin('~/.local/share/nvim/plugged')
 Plug 'gruvbox-community/gruvbox'
-Plug 'tpope/vim-obsession'
+Plug 'sainnhe/gruvbox-material'
+Plug 'tpope/vim-vinegar'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() }}
+Plug 'tpope/vim-obsession'
 Plug 'junegunn/goyo.vim'
 Plug 'justinmk/vim-sneak'
 Plug 'tmsvg/pear-tree'
@@ -47,6 +49,13 @@ let g:netrw_banner = 0
 let g:gruvbox_italic = 1
 let g:gruvbox_contrast_dark = 'medium'
 let g:gruvbox_invert_selection = 0
+let g:gruvbox_material_background = 'medium'
+let g:gruvbox_material_enable_bold = 1
+let g:gruvbox_material_enable_italic = 1
+let g:gruvbox_material_ui_contrast = 'high'
+let g:gruvbox_material_statusline_style = 'default' "mix, original, default
+let g:gruvbox_material_better_performance = 1
+let g:gruvbox_material_palette = 'material' "material, mix, original
 let g:fzf_layout = { 'window': { 'width': 0.9, 'height': 0.7 } }
 let g:sneak#prompt = 'SNEAK > '
 let g:sneak#label = 1
@@ -56,7 +65,7 @@ let g:python_highlight_all = 1
 let g:python_highlight_space_errors = 0
 let g:python_highlight_file_headers_as_comments = 1
 
-colorscheme gruvbox
+colorscheme gruvbox-material
 
 
 """ custom keymappings
@@ -115,7 +124,7 @@ inoremap <C-p> <C-x><C-o>
 
 autocmd BufWritePre * :%s/\s\+$//e
 
-command Session :call CreateNewSession()
+command! NewSession :call CreateNewSession()
 
 function! CreateNewSession()
     let path = getcwd() . '/.vim'
