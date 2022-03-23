@@ -10,7 +10,7 @@ node
 fzf
 fd
 macchina
-grip
+pandoc
 homebrew/cask-fonts/font-cascadia-mono
 visual-studio-code
 karabiner-elements
