@@ -29,14 +29,15 @@ set undofile
 set viminfo=""
 set bg=dark
 set guicursor+=n-v:hor50,r:block
+set nohidden
 
 """ plugins and plugin settings
 
 call plug#begin('~/.local/share/nvim/plugged')
 Plug 'gruvbox-community/gruvbox'
 Plug 'sainnhe/gruvbox-material'
-Plug 'tpope/vim-vinegar'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() }}
+Plug 'justinmk/vim-dirvish'
 Plug 'tpope/vim-obsession'
 Plug 'junegunn/goyo.vim'
 Plug 'justinmk/vim-sneak'
@@ -46,6 +47,7 @@ Plug 'vim-python/python-syntax'
 call plug#end()
 
 let g:netrw_banner = 0
+let g:dirvish_mode = ':sort ,.^*[\/],'
 let g:gruvbox_italic = 1
 let g:gruvbox_contrast_dark = 'medium'
 let g:gruvbox_invert_selection = 0
@@ -73,8 +75,8 @@ colorscheme gruvbox-material
 let mapleader = " "
 
 nnoremap <C-b> :ls<CR>:buffer<Space>
-nnoremap <C-n> :bn<CR>
-nnoremap <C-p> :bp<CR>
+nnoremap <silent><C-n> :bnext<CR>
+nnoremap <silent><C-p> :bprev<CR>
 nnoremap <C-t> :FZF<CR>
 nnoremap <C-f> :file<CR>
 nnoremap <C-h> :h<Space>
@@ -118,6 +120,9 @@ vnoremap < <gv
 
 inoremap <C-n> <C-x><C-o>
 inoremap <C-p> <C-x><C-o>
+
+autocmd Filetype dirvish nnoremap <silent><buffer> <C-n> :bnext<CR>
+autocmd Filetype dirvish nnoremap <silent><buffer> <C-p> :bprev<CR>
 
 
 """ functions
