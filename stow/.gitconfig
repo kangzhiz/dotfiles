@@ -2,11 +2,8 @@
     name = John Zhao
     email = kangzhiz@pm.me
 
-[core]
-    excludesfile = ~/.gitignore
-
 [diff]
-    tool = vimdiff
+    tool = nvimdiff
 
 [alias]
     a = add
