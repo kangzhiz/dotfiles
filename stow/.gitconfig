@@ -9,6 +9,7 @@
     tool = vimdiff
 
 [alias]
+    a = add
     aa = add -A
     bo = checkout -b
     com = commit -m
