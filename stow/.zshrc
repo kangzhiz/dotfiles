@@ -55,6 +55,21 @@ alias pipsu='pips --user'
 
 alias gg='exit'
 
+
+### functions
+
+karabiner_backup() {
+    cp ~/.config/karabiner/karabiner.json ~/Documents/dotfiles/misc/karabiner.json
+}
+
+md_prev() {
+    pandoc $1 > temp.html
+    open temp.html
+    sleep 4
+    rm -f temp.html
+}
+
+
 ### startup
 
 eval "$(pyenv init -)"
