@@ -11,9 +11,7 @@ fzf
 fd
 tealdeer
 macchina
-pandoc
 homebrew/cask-fonts/font-cascadia-mono
-visual-studio-code
 pycharm-ce
 coteditor
 vimr
