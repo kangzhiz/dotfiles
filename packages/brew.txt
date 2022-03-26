@@ -9,6 +9,7 @@ zlib
 node
 fzf
 fd
+tealdeer
 macchina
 pandoc
 homebrew/cask-fonts/font-cascadia-mono
