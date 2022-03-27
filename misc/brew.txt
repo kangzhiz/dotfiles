@@ -14,5 +14,4 @@ macchina
 homebrew/cask-fonts/font-cascadia-mono
 pycharm-ce
 coteditor
-vimr
 karabiner-elements

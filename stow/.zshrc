@@ -58,8 +58,15 @@ alias gg='exit'
 
 ### functions
 
-karabiner_backup() {
+karabinerbackup() {
     cp ~/.config/karabiner/karabiner.json ~/Documents/dotfiles/misc/karabiner.json
+}
+
+mdprev() {
+    pandoc $1 > temp.html
+    open temp.html
+    sleep 2
+    rm -f temp.html
 }
 
 
