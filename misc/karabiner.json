@@ -102,7 +102,7 @@
                     },
                     "to": [
                         {
-                            "consumer_key_code": "al_terminal_lock_or_screensaver"
+                            "apple_vendor_keyboard_key_code": "launchpad"
                         }
                     ]
                 },
