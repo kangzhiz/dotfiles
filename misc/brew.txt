@@ -15,4 +15,8 @@ pandoc
 homebrew/cask-fonts/font-cascadia-mono
 pycharm-ce
 coteditor
+visual-studio-code
 karabiner-elements
+rectangle
+alt-tab
+maccy
