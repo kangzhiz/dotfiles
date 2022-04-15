@@ -18,5 +18,3 @@ coteditor
 visual-studio-code
 karabiner-elements
 rectangle
-alt-tab
-maccy
