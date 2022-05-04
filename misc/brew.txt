@@ -1,20 +1,23 @@
+# command line tools
 stow
 neovim
+fzf
+fd
+tealdeer
+macchina
+pandoc
+
+# python installation
 pyenv
 openssl
 readline
 sqlite3
 xz
 zlib
-node
-fzf
-fd
-tealdeer
-macchina
-pandoc
-homebrew/cask-fonts/font-cascadia-mono
-pycharm-ce
+
+# applications
 coteditor
-visual-studio-code
+pycharm-ce
 karabiner-elements
 rectangle
+maccy

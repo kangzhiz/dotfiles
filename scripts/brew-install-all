@@ -12,4 +12,4 @@ if [ ! -f $DOTFILES_DIR/misc/brew.txt ]; then
 fi
 
 # install packages
-brew install $(cat $DOTFILES_DIR/misc/brew.txt)
+brew install $(awk '!/^#/ && !/^$/' $DOTFILES_DIR/misc/brew.txt)
