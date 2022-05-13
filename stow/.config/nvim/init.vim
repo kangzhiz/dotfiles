@@ -52,8 +52,8 @@ let g:gruvbox_italic = 1
 let g:gruvbox_contrast_dark = 'medium'
 let g:gruvbox_invert_selection = 0
 let g:gruvbox_material_background = 'medium'
-let g:gruvbox_material_enable_bold = 1
-let g:gruvbox_material_enable_italic = 1
+let g:gruvbox_material_enable_bold = 0
+let g:gruvbox_material_enable_italic = 0
 let g:gruvbox_material_ui_contrast = 'high'
 let g:gruvbox_material_statusline_style = 'default' "mix, original, default
 let g:gruvbox_material_better_performance = 1
@@ -67,7 +67,7 @@ let g:python_highlight_all = 1
 let g:python_highlight_space_errors = 0
 let g:python_highlight_file_headers_as_comments = 1
 
-colorscheme gruvbox-material
+colorscheme gruvbox
 
 
 """ custom keymappings
