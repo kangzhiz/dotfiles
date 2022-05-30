@@ -17,7 +17,6 @@ zlib
 
 # applications
 coteditor
-pycharm-ce
 karabiner-elements
 rectangle
 maccy
