@@ -82,7 +82,7 @@
                     },
                     "to": [
                         {
-                            "shell_command": "open -aterminal"
+                            "shell_command": "open ~"
                         }
                     ]
                 },
@@ -92,7 +92,7 @@
                     },
                     "to": [
                         {
-                            "consumer_key_code": "dictation"
+                            "shell_command": "open -aterminal"
                         }
                     ]
                 },
@@ -102,7 +102,7 @@
                     },
                     "to": [
                         {
-                            "apple_vendor_keyboard_key_code": "mission_control"
+                            "apple_vendor_keyboard_key_code": "launchpad"
                         }
                     ]
                 },
