@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+mkdir css
+mkdir img
+mkdir js
+touch index.html
+
