@@ -37,8 +37,6 @@ call plug#begin('~/.local/share/nvim/plugged')
 Plug 'gruvbox-community/gruvbox'
 Plug 'sainnhe/gruvbox-material'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() }}
-Plug 'justinmk/vim-dirvish'
-Plug 'tpope/vim-obsession'
 Plug 'junegunn/goyo.vim'
 Plug 'justinmk/vim-sneak'
 Plug 'tmsvg/pear-tree'
@@ -47,7 +45,7 @@ Plug 'vim-python/python-syntax'
 call plug#end()
 
 let g:netrw_banner = 0
-let g:dirvish_mode = ':sort ,.^*[\/],'
+
 let g:gruvbox_italic = 1
 let g:gruvbox_contrast_dark = 'medium'
 let g:gruvbox_invert_selection = 0
@@ -58,11 +56,14 @@ let g:gruvbox_material_ui_contrast = 'high'
 let g:gruvbox_material_statusline_style = 'default' "mix, original, default
 let g:gruvbox_material_better_performance = 1
 let g:gruvbox_material_palette = 'material' "material, mix, original
+
 let g:fzf_layout = { 'window': { 'width': 0.9, 'height': 0.7 } }
+
 let g:sneak#prompt = 'SNEAK > '
 let g:sneak#label = 1
 let g:sneak#use_ic_scs = 1
 let g:sneak#target_labels = 'bcdefgmnqstuwyzBCDEFGHIJKLMNQSTUWYZ;/?'
+
 let g:python_highlight_all = 1
 let g:python_highlight_space_errors = 0
 let g:python_highlight_file_headers_as_comments = 1
@@ -121,27 +122,10 @@ vnoremap < <gv
 inoremap <C-n> <C-x><C-o>
 inoremap <C-p> <C-x><C-o>
 
-autocmd Filetype dirvish nnoremap <silent><buffer> <C-n> :bnext<CR>
-autocmd Filetype dirvish nnoremap <silent><buffer> <C-p> :bprev<CR>
-
 
 """ functions
 
 autocmd BufWritePre * :%s/\s\+$//e
-
-command! NewSession :call CreateNewSession()
-
-function! CreateNewSession()
-    let path = getcwd() . '/.vim'
-    let response = confirm('Create a new vim session ' . path . '/Session.vim?', "&Y\n&N", 2)
-
-    if response == 1
-        if !isdirectory(path)
-            call mkdir(path)
-        endif
-        :Obsession .vim/Session.vim
-    endif
-endfunction
 
 function! FoldText()
     let linecount = v:foldend - v:foldstart + 1

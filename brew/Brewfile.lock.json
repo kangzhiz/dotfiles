@@ -11,7 +11,7 @@
         "revision": "a2073b77bf434f3ed8cbf8eebb3dadbae779b7c6"
       },
       "homebrew/core": {
-        "revision": "4f0f65e3e6b9a763e88aea0e20c1d4b404ce5e2f"
+        "revision": "de986af14a372874527ca8b567404c38a3008194"
       }
     },
     "brew": {
@@ -465,7 +465,7 @@
       "monterey": {
         "HOMEBREW_VERSION": "3.6.4",
         "HOMEBREW_PREFIX": "/opt/homebrew",
-        "Homebrew/homebrew-core": "4f0f65e3e6b9a763e88aea0e20c1d4b404ce5e2f",
+        "Homebrew/homebrew-core": "de986af14a372874527ca8b567404c38a3008194",
         "CLT": "14.0.0.0.1.1661618636",
         "Xcode": "14.0",
         "macOS": "12.6"
