@@ -31,7 +31,7 @@ alias _down='cd ~/Downloads'
 alias _dots='cd ~/Documents/dotfiles'
 alias _site='cd ~/Documents/kangzhiz.github.io'
 
-alias brewdump='brew bundle dump'
+alias brewdump='rm -f Brewfile; brew bundle dump'
 alias brewdeps='brew deps --tree --installed'
 
 alias vi='nvim'
@@ -59,4 +59,3 @@ mdprev() {
     sleep 2
     rm -f temp.html
 }
-
