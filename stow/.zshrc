@@ -31,30 +31,21 @@ alias _down='cd ~/Downloads'
 alias _dots='cd ~/Documents/dotfiles'
 alias _site='cd ~/Documents/kangzhiz.github.io'
 
+alias brewdump='brew bundle dump'
+alias brewdeps='brew deps --tree --installed'
+
 alias vi='nvim'
-alias vis='vi -S .vim/Session.vim'
+alias vid='vi .'
 
 alias ls='ls -AFohv --color'
 alias tree='tree -CIa ".git|.venv|node_modules"'
 alias grep='grep -Rn --color --exclude-dir={.git,.venv,node_modules}'
 alias rm='rm -i'
-alias bc='bc -q'
 
 alias g='git'
 alias gs='g s'
 
-alias py='python3'
-alias pymv='py -m venv .venv'
-alias pyva='source .venv/bin/activate'
-alias pyvd='deactivate'
-alias pip='py -m pip'
-alias pipf='pip freeze'
-alias pipup='pip install --upgrade pip'
-alias pips='pip list'
-alias pipsu='pips --user'
-
 alias gg='exit'
-
 
 ### functions
 
@@ -69,7 +60,3 @@ mdprev() {
     rm -f temp.html
 }
 
-
-### startup
-
-eval "$(pyenv init -)"

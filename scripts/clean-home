@@ -8,5 +8,13 @@ if [ -f $HOME/.viminfo ]; then
     rm $HOME/.viminfo
 fi
 
+if [ -f $HOME/.python_history ]; then
+    rm $HOME/.python_history
+fi
+
+if [ -f $HOME/.lesshst ]; then
+    rm $HOME/.lesshst
+fi
+
 # clean up vim undo files
 find $HOME/.local/share/nvim/undo -type f -mtime +90 -delete
