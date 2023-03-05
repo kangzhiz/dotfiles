@@ -46,13 +46,20 @@ set mouse=a
 
 call plug#begin('~/.local/share/nvim/plugged')
 Plug 'arcticicestudio/nord-vim'
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() }}
-Plug 'tmsvg/pear-tree'
-Plug 'tpope/vim-commentary'
 call plug#end()
 
 let g:netrw_banner = 0
-let g:fzf_layout = { 'window': { 'width': 0.9, 'height': 0.7 } }
+
+let g:nord_bold = 1
+let g:nord_italic = 1
+
+augroup nord-overrides
+    autocmd!
+    au ColorScheme nord hi Normal guifg=#d8dee9 ctermbg=NONE guibg=NONE
+    au ColorScheme nord hi CursorLine ctermbg=NONE guibg=NONE
+    au ColorScheme nord hi Folded guibg=NONE
+    au ColorScheme nord hi ColorColumn guibg=#2e3440
+augroup END
 
 colorscheme nord
 

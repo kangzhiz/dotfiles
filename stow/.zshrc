@@ -20,7 +20,8 @@ source "/opt/homebrew/opt/fzf/shell/key-bindings.zsh"
 export FZF_CTRL_T_COMMAND="fd --type f -HL --color=always"
 export FZF_ALT_C_COMMAND="fd --type d -HL --color=always"
 export FZF_DEFAULT_COMMAND=${FZF_CTRL_T_COMMAND}
-export FZF_DEFAULT_OPTS='--inline-info --reverse --ansi --height=21'
+export FZF_DEFAULT_OPTS='--inline-info --reverse --ansi'
+export LS_COLORS=''
 
 ### custom aliases
 
