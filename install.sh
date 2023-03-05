@@ -34,4 +34,3 @@ else
 fi
 
 printf "Dotfiles setup done.\n"
-

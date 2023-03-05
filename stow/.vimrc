@@ -26,36 +26,26 @@ set startofline
 set nobackup
 set noswapfile
 set undofile
+set undodir=~/.vim/undo
 set viminfo=""
 set bg=dark
 set guicursor+=n-v:hor50,r:block
 set nohidden
+set timeoutlen=1000
+set ttimeoutlen=5
 
 """ plugins and plugin settings
 
 call plug#begin('~/.local/share/nvim/plugged')
-Plug 'gruvbox-community/gruvbox'
-Plug 'sainnhe/gruvbox-material'
+Plug 'arcticicestudio/nord-vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() }}
 Plug 'junegunn/goyo.vim'
 Plug 'justinmk/vim-sneak'
 Plug 'tmsvg/pear-tree'
 Plug 'tpope/vim-commentary'
-Plug 'vim-python/python-syntax'
 call plug#end()
 
 let g:netrw_banner = 0
-
-let g:gruvbox_italic = 1
-let g:gruvbox_contrast_dark = 'medium'
-let g:gruvbox_invert_selection = 0
-let g:gruvbox_material_background = 'medium'
-let g:gruvbox_material_enable_bold = 0
-let g:gruvbox_material_enable_italic = 0
-let g:gruvbox_material_ui_contrast = 'high'
-let g:gruvbox_material_statusline_style = 'default' "mix, original, default
-let g:gruvbox_material_better_performance = 1
-let g:gruvbox_material_palette = 'material' "material, mix, original
 
 let g:fzf_layout = { 'window': { 'width': 0.9, 'height': 0.7 } }
 
@@ -64,11 +54,7 @@ let g:sneak#label = 1
 let g:sneak#use_ic_scs = 1
 let g:sneak#target_labels = 'bcdefgmnqstuwyzBCDEFGHIJKLMNQSTUWYZ;/?'
 
-let g:python_highlight_all = 1
-let g:python_highlight_space_errors = 0
-let g:python_highlight_file_headers_as_comments = 1
-
-colorscheme gruvbox
+colorscheme nord
 
 
 """ custom keymappings

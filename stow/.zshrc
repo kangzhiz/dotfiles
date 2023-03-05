@@ -33,13 +33,14 @@ alias _site='cd ~/Documents/kangzhiz.github.io'
 
 alias brewdump='rm -f Brewfile; brew bundle dump'
 alias brewdeps='brew deps --tree --installed'
+alias brewclean='brew autoremove; brew cleanup'
 
-alias vi='nvim'
+alias vi='vim'
 alias vid='vi .'
 
 alias ls='ls -AFohv --color'
 alias tree='tree -CIa ".git|.venv|node_modules"'
-alias grep='grep -Rn --color --exclude-dir={.git,.venv,node_modules}'
+alias grep='ggrep -Rn --color --exclude-dir={.git,.venv,node_modules}'
 alias rm='rm -i'
 
 alias g='git'
@@ -48,10 +49,6 @@ alias gs='g s'
 alias gg='exit'
 
 ### functions
-
-karabinerbackup() {
-    cp ~/.config/karabiner/karabiner.json ~/Documents/dotfiles/misc/karabiner.json
-}
 
 mdprev() {
     pandoc $1 > temp.html

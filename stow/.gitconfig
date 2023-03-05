@@ -3,7 +3,7 @@
     email = kangzhiz@pm.me
 
 [diff]
-    tool = nvimdiff
+    tool = vimdiff
 
 [alias]
     a = add
