@@ -3,6 +3,7 @@
 syntax on
 filetype plugin indent on
 
+set nocompatible
 set noerrorbells
 set shellcmdflag=-ic
 set number
@@ -12,48 +13,46 @@ set scrolloff=5
 set colorcolumn=
 set title
 set cursorline
+set ruler
+set showcmd
+set wildmenu
 set splitbelow
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
 set expandtab
+set autoindent
 set foldmethod=indent
 set foldlevel=99
 set foldtext=FoldText()
+set incsearch
 set hlsearch
 set ignorecase
 set smartcase
+set hidden
 set startofline
 set nobackup
 set noswapfile
 set undofile
 set undodir=~/.vim/undo
 set viminfo=""
+set backspace=indent,eol,start
 set bg=dark
-set guicursor+=n-v:hor50,r:block
-set nohidden
 set timeoutlen=1000
 set ttimeoutlen=5
+set mouse=a
 
 """ plugins and plugin settings
 
 call plug#begin('~/.local/share/nvim/plugged')
 Plug 'arcticicestudio/nord-vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() }}
-Plug 'junegunn/goyo.vim'
-Plug 'justinmk/vim-sneak'
 Plug 'tmsvg/pear-tree'
 Plug 'tpope/vim-commentary'
 call plug#end()
 
 let g:netrw_banner = 0
-
 let g:fzf_layout = { 'window': { 'width': 0.9, 'height': 0.7 } }
-
-let g:sneak#prompt = 'SNEAK > '
-let g:sneak#label = 1
-let g:sneak#use_ic_scs = 1
-let g:sneak#target_labels = 'bcdefgmnqstuwyzBCDEFGHIJKLMNQSTUWYZ;/?'
 
 colorscheme nord
 
@@ -78,7 +77,6 @@ nnoremap == <C-w>=
 nnoremap <silent><leader><leader> :noh <bar> set nospell<CR>
 nnoremap <silent><leader>\ :exe "set cc=" . (&cc == "" ? "80" :"")<CR>
 nnoremap <silent><leader>s :setlocal spell! spelllang=en_us<CR>
-nnoremap <silent><leader>g :Goyo<CR>
 nnoremap <leader>q <C-z>
 nnoremap <leader>w :w<CR>
 nnoremap <leader>ra :%s/
@@ -105,9 +103,6 @@ vnoremap L $
 vnoremap <leader>r :s/
 vnoremap > >gv
 vnoremap < <gv
-
-inoremap <C-n> <C-x><C-o>
-inoremap <C-p> <C-x><C-o>
 
 
 """ functions
