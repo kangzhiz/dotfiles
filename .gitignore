@@ -1,10 +1,8 @@
 .DS_Store
 
-# backups of default files
 .backups/
-
-# used for testing
 test/
+Brewfile.lock.json
 
 # check for .DS_Store files in stow/
 !stow/**/.DS_Store

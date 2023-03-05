@@ -17,4 +17,4 @@ if [ -f $HOME/.lesshst ]; then
 fi
 
 # clean up vim undo files
-find $HOME/.local/share/nvim/undo -type f -mtime +90 -delete
+find $HOME/.vim/undo -type f -mtime +90 -delete

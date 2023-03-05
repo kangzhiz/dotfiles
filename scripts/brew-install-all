@@ -6,10 +6,10 @@ DOTFILES_DIR="$HOME/Documents/dotfiles"
 printf "Installing packages from Homebrew...\n"
 
 # make sure brew.txt exists
-if [ ! -f $DOTFILES_DIR/misc/brew.txt ]; then
-    printf "Installation stopped: misc/brew.txt not found.\n"
+if [ ! -f $DOTFILES_DIR/brew/Brewfile ]; then
+    printf "Installation stopped: Brewfile not found.\n"
     exit
 fi
 
 # install packages
-brew install $(awk '!/^#/ && !/^$/' $DOTFILES_DIR/misc/brew.txt)
+(cd $DOTFILES_DIR/brew && brew bundle)

@@ -20,6 +20,7 @@ set expandtab
 set foldmethod=indent
 set foldlevel=99
 set foldtext=FoldText()
+set hlsearch
 set ignorecase
 set smartcase
 set startofline
