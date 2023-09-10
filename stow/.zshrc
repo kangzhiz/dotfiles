@@ -1,4 +1,4 @@
-PATH=$PATH:~/Documents/dotfiles/scripts
+PATH=$PATH:~/Developer/dotfiles/scripts
 
 ### autocompletion
 
@@ -29,8 +29,9 @@ alias ..='cd ..'
 alias _desk='cd ~/Desktop'
 alias _docs='cd ~/Documents'
 alias _down='cd ~/Downloads'
-alias _dots='cd ~/Documents/dotfiles'
-alias _site='cd ~/Documents/kangzhiz.github.io'
+alias _dev='cd ~/Developer'
+alias _dots='cd ~/Developer/dotfiles'
+alias _site='cd ~/Developer/kangzhiz.github.io'
 
 alias brewdump='rm -f Brewfile; brew bundle dump'
 alias brewdeps='brew deps --tree --installed'

@@ -14,7 +14,7 @@ See instructions [here](https://docs.github.com/en/authentication/connecting-to-
 
 ## Installing dotfiles
 
-1. Clone repository into `~/Documents/dotfiles`.
-2. Navigate to `~/Documents/dotfiles`.
+1. Clone repository into `~/Developer/dotfiles`.
+2. Navigate to `~/Developer/dotfiles`.
 3. Run `install.sh`.
 
