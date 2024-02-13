@@ -3,7 +3,6 @@
 syntax on
 filetype plugin indent on
 
-set nocompatible
 set noerrorbells
 set shellcmdflag=-ic
 set number
@@ -13,39 +12,38 @@ set scrolloff=5
 set colorcolumn=
 set title
 set cursorline
-set ruler
-set showcmd
-set wildmenu
 set splitbelow
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
 set expandtab
-set autoindent
 set foldmethod=indent
 set foldlevel=99
 set foldtext=FoldText()
-set incsearch
+set hidden
 set hlsearch
 set ignorecase
 set smartcase
-set hidden
 set startofline
 set nobackup
 set noswapfile
 set undofile
-set undodir=~/.vim/undo
 set viminfo=""
 set backspace=indent,eol,start
 set bg=dark
-set timeoutlen=1000
-set ttimeoutlen=5
+set guicursor+=n-v:hor50,r:block
 set mouse=a
 
 """ plugins and plugin settings
 
 call plug#begin('~/.local/share/nvim/plugged')
 Plug 'arcticicestudio/nord-vim'
+Plug 'gruvbox-community/gruvbox'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() }}
+Plug 'junegunn/goyo.vim'
+Plug 'justinmk/vim-sneak'
+Plug 'tmsvg/pear-tree'
+Plug 'tpope/vim-commentary'
 call plug#end()
 
 let g:netrw_banner = 0
@@ -61,7 +59,25 @@ augroup nord-overrides
     au ColorScheme nord hi ColorColumn guibg=#2e3440
 augroup END
 
+let g:gruvbox_italic = 1
+let g:gruvbox_contrast_dark = 'medium'
+let g:gruvbox_invert_selection = 0
+let g:gruvbox_material_background = 'medium'
+let g:gruvbox_material_enable_bold = 0
+let g:gruvbox_material_enable_italic = 0
+let g:gruvbox_material_ui_contrast = 'high'
+let g:gruvbox_material_statusline_style = 'default' " mix, original, default
+let g:gruvbox_material_better_performance = 1
+let g:gruvbox_material_palette = 'material' " material, mix, original
+
 colorscheme nord
+
+let g:fzf_layout = { 'window': { 'width': 0.9, 'height': 0.7 } }
+
+let g:sneak#prompt = 'SNEAK > '
+let g:sneak#label = 1
+let g:sneak#use_ic_scs = 1
+let g:sneak#target_labels = 'bcdefgmnqstuwyzBCDEFGHIJKLMNQSTUWYZ;/?'
 
 
 """ custom keymappings
@@ -100,6 +116,9 @@ nnoremap <leader>K kJ$
 nnoremap <leader>o o<Esc>
 nnoremap <leader>O O<Esc>
 nnoremap <leader># :set nu! rnu!<CR>
+
+inoremap <C-n> <C-x><C-o>
+inoremap <C-p> <C-x><C-o>
 
 vnoremap <C-j> 8j
 vnoremap <C-k> 8k

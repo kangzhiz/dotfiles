@@ -36,7 +36,8 @@ alias brewdump='rm -f Brewfile; brew bundle dump'
 alias brewdeps='brew deps --tree --installed'
 alias brewclean='brew autoremove; brew cleanup'
 
-alias vi='vim'
+alias vi='nvim'
+alias vim='nvim'
 alias vid='vi .'
 
 alias ls='ls -AFohv --color'
