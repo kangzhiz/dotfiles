@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 
-DOTFILES_DIR="$HOME/Developer/dotfiles"
+DOTFILES_DIR="$HOME/Documents/dotfiles"
 STOW_DIR="$DOTFILES_DIR/stow"
 
 printf "\nInstalling dotfiles to home directory...\n"

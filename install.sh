@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 
 
-DOTFILES_DIR="$HOME/Developer/dotfiles"
+DOTFILES_DIR="$HOME/Documents/dotfiles"
 
 # check if repo was cloned into the correct directory
 if [ $PWD != $DOTFILES_DIR ]; then
-    printf "Oops, wrong directory! Clone into ~/Developer/dotfiles.\n"
+    printf "Oops, wrong directory! Clone into ~/Documents/dotfiles.\n"
     exit
 fi
 

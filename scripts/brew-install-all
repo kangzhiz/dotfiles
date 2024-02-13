@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 
-DOTFILES_DIR="$HOME/Developer/dotfiles"
+DOTFILES_DIR="$HOME/Documents/dotfiles"
 
 printf "Installing packages from Homebrew...\n"
 
