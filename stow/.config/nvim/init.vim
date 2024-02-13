@@ -28,6 +28,7 @@ set startofline
 set nobackup
 set noswapfile
 set undofile
+set undodir=~/.config/nvim/undo//
 set viminfo=""
 set backspace=indent,eol,start
 set bg=dark
